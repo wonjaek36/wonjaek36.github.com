@@ -16,7 +16,8 @@
 title: Wonjaek's Note
 email: wonjaek36@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-	Note of Wonjaek for remembering.
+	test test
+	test test
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Nope
