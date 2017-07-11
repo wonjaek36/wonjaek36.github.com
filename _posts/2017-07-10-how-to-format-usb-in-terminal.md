@@ -18,4 +18,4 @@ sudo mkdosfs -F 32 -I /dev/<device name>
 
 Reference: [how to format USB Flash Disk using Ubuntu terminal]
 
-[how to format USB Flash Disk using Ubuntu terminal]: https://askubuntu.com/questions/662935/how-to-format-usb-flash-disk-using-ubuntu-terminal
+[how to format USB Flash Disk using Ubuntu terminal]:https://askubuntu.com/questions/662935/how-to-format-usb-flash-disk-using-ubuntu-terminal
