@@ -46,7 +46,7 @@ Topic: <topic name> PartitionCount:1 ReplicationFactor: 1 Configs:
 {% endhighlight %}
 로 결과가 나온다. 
 
-각각의 파라미터에 대해 간략하게 설명하면,
+각각의 파라미터에 대해 간략하게 설명하면,<br />
 PartitionCount: 파티션의 개수
 ReplicationFactor: Replica의 개수, 지금은 Single Node이므로 1밖에 되지 않는다.
 Partition: partition 번호
