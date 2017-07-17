@@ -68,5 +68,6 @@ zookeeper.connect: <zookeeper_ip:zookeeper_port><br />
 listeners: (PLAINTEXT://ip:port or SSL, CLIENT, etc...)<br />
 로 설정하고 각 kafka를 구동하면 된다. 
 
-Reference: [apache kafka]
+Reference: [apache kafka] 
+
 [apache kafka]: https://kafka.apache.org
