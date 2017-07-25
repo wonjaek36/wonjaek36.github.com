@@ -2,7 +2,7 @@
 layout: post
 title: "How to open port in CentOS 7"
 date: 2017-07-17 16:40 +0900
-categories: operation
+category: operation
 ---
 
 서버들을 운영하다보면, 방화벽을 열 때가 있다. <br />

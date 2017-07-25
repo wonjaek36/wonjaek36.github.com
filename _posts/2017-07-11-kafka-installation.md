@@ -2,7 +2,7 @@
 layout: post
 title: "Installation Kafka"
 date: 2017-07-11 14:48 +0900
-categories: kafka
+category: kafka
 ---
 
 Step 1. Download kafka

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Format USB in terminal(Ubuntu)"
 date: 2017-07-10 10:13 +0900
-categories: utils
+category: utils
 ---
 
 Ubuntu에서 가끔 disk util로 usb를 포맷하지 못 하는 경우가 있다.
