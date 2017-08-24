@@ -28,7 +28,7 @@ Topic은 publish된 message의 카테고리라고 할 수 있다.<br />
 (이 기간 동안 반드시 데이터가 유지된다. 이 기간이 지나면 데이터가 Consumer에 의해 데이터가 소비되지 않아도 삭제된다.)<br />
 또한, 각 Consumer가 Topic에서 데이터를 어디까지 소비하였는지 알기 위해서, Consumer 별로 offset을 유지한다.
 
-<img src="{{ site.url }}/assets/log_consumer.png" class="center-image" />
+<img src="{{ site.url }}/assets/log_consumer.png" class="center-image" width="50%"/>
 <span style="text-align:center">(Source : [Kafka Documentation])</span>
 </p>
 <h3>3. Partition</h3> 
