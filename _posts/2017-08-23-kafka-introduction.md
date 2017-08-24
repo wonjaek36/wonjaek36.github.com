@@ -28,8 +28,8 @@ Topic은 publish된 message의 카테고리라고 할 수 있다.<br />
 (이 기간 동안 반드시 데이터가 유지된다. 이 기간이 지나면 데이터가 Consumer에 의해 데이터가 소비되지 않아도 삭제된다.)<br />
 또한, 각 Consumer가 Topic에서 데이터를 어디까지 소비하였는지 알기 위해서, Consumer 별로 offset을 유지한다.
 
-![log_consumer]({{ site.url }}/assets/log_consumer){: .center-image }<br />
-(Source : Kafka Documentation)
+<img src="{{ site.url }}/assets/log_consumer" class="center-image" />
+<span style="text-align:center">(Source : [Kafka Documentation])</span>
 </p>
 <h3>3. Partition</h3> 
 <p>
@@ -37,11 +37,13 @@ Topic은 publish된 message의 카테고리라고 할 수 있다.<br />
 여러 Consumer들은 원하는 partition에서 데이터를 소진할 수 있다. <br />
 Replica와 partition의 수를 잘 조절하면 데이터를 안전하게 보관하면서, 병렬로 처리할 수 있다.
 
-![kafka_partition]({{ site.url }}/assets/log_anatomy)<br />
-(Source : Kafka Documentation)
+<img src="{{ site.url }}/assets/log_anatomy" class="center-image" />
+<span style="text-align:center">(Source : [Kafka Documentation])</span>
 </p>
 <h3>4. Consumer Group</h3> 
 <p>
 Producer와 달리 Consumer에는 Consumer Group을 지정할 수 있다.(Producer는 같은 Topic으로 데이터를 같이 생성하면 Group이라고 할 수 있다.)<br />
 Consumer Group은 여러 Consumer들이 Topic의 offset을 공유하면서 마치 한 Consumer처럼 일을 처리한다. 따라서 Consumer가 데이터를 소비하고 처리할 것이 많아 병렬처리를 하고 싶거나, Consumer의 HA(High Availability)을 지원하고 싶다면 이 기능을 사용할 수 있다.
 </p>
+
+[Kafka Documentation]: http://kafka.apache.org/intro
