@@ -17,6 +17,8 @@ category: kafka
 * (정확하지는 않습니다. 밑에 자세히 설명하겠습니다.)<br />
 카프카는 Pub/Sub 모델을 이용하여 Producer는 자신이 생성/전달하는 데이터의 Topic를 설정할 수 있게 하였고, Consumer는 자신이 원하는 Topic 데이터만 받을 수 있게 설정할 수 있다.
 
+<img src="{{ site.url }}/assets/simple_kafka_architecture.png" class="center-image" />
+
 ![simple_kafka_architecture]({{ site.url }}/assets/simple_kafka_architecture.png) <br />
 (Simple Kafka Architecture)
 </p>
