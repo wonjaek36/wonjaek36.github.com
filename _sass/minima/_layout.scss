@@ -188,7 +188,7 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    /*margin-bottom: $spacing-unit;*/
   }
 }
 
@@ -198,8 +198,11 @@
 }
 
 .post-link {
-  display: block;
-  @include relative-font-size(1.5);
+/* display: block;*/
+  @include relative-font-size(1.0);
+	margin: 0px;
+	padding: 0px;
+	
 }
 
 
