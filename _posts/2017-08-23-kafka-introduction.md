@@ -14,10 +14,10 @@ category: kafka
 2) Consumer는 Cluster로부터 데이터를 전달받는다.<br />
 3) Cluster는 Producer가 전송한 데이터를 Consumer가 소비할 때까지 보관한다. <br />
 * (정확하지는 않습니다. 밑에 자세히 설명하겠습니다.)<br />
-카프카는 Pub/Sub 모델을 이용하여 Producer는 자신이 생성/전달하는 데이터의 Topic를 설정할 수 있게 하였고, Consumer는 자신이 원하는 Topic 데이터만 받을 수 있게 설정할 수 있다.
+카프카는 Pub/Sub 모델을 이용하여 Producer는 자신이 생성/전달하는 데이터의 Topic를 설정할 수 있게 하였고, Consumer는 자신이 원하는 Topic 데이터만 받을 수 있게 설정할 수 있다.<br />
 
 <img src="{{ site.url }}/assets/simple_kafka_architecture.png" class="center-image" />
-<span style="text-align: center">(Simple Kafka Architecture)</span>
+<p style="text-align: center">(Simple Kafka Architecture)</p>
 </p>
 <h3>2. Topic</h3> 
 <p>
@@ -29,7 +29,6 @@ Topic은 publish된 message의 카테고리라고 할 수 있다.<br />
 또한, 각 Consumer가 Topic에서 데이터를 어디까지 소비하였는지 알기 위해서, Consumer 별로 offset을 유지한다.
 
 <img src="{{ site.url }}/assets/log_consumer.png" class="center-image" width="50%"/>
-<span style="text-align:center">(Source : [Kafka Documentation])</span>
 </p>
 <h3>3. Partition</h3> 
 <p>
@@ -38,7 +37,6 @@ Topic은 publish된 message의 카테고리라고 할 수 있다.<br />
 Replica와 partition의 수를 잘 조절하면 데이터를 안전하게 보관하면서, 병렬로 처리할 수 있다.
 
 <img src="{{ site.url }}/assets/log_anatomy.png" class="center-image" />
-<span style="text-align:center">(Source : [Kafka Documentation])</span>
 </p>
 <h3>4. Consumer Group</h3> 
 <p>
@@ -46,4 +44,6 @@ Producer와 달리 Consumer에는 Consumer Group을 지정할 수 있다.(Produc
 Consumer Group은 여러 Consumer들이 Topic의 offset을 공유하면서 마치 한 Consumer처럼 일을 처리한다. 따라서 Consumer가 데이터를 소비하고 처리할 것이 많아 병렬처리를 하고 싶거나, Consumer의 HA(High Availability)을 지원하고 싶다면 이 기능을 사용할 수 있다.
 </p>
 
-[Kafka Documentation]: http://kafka.apache.org/intro
+Reference: [kafka documentation]
+
+[kafka documentation]: http://kafka.apache.org/intro
