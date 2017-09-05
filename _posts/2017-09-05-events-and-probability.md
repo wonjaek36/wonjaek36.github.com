@@ -6,7 +6,7 @@ category: "Probability and Computing"
 ---
 
 대학원 알고리즘 특론 정리노트<br />
-정식 책 재목은<br />
+책 재목은<br />
 Probability and Computing: Randomization and Probabilistic Techniques in Algorithms and Data Analysis<br />
 이다.
 
