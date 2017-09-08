@@ -6,9 +6,8 @@ category: "Probability and Computing"
 ---
 
 대학원 알고리즘 특론 정리노트<br />
-책 재목은<br />
+수업은 다음 책으로 진행한다.<br />
 Probability and Computing: Randomization and Probabilistic Techniques in Algorithms and Data Analysis<br />
-이다.
 
 <h4> 1.1 Application: Verifying Polynomial Identities </h4>
 <p>
@@ -58,8 +57,47 @@ F(r) = G(r)이 같으면 두 식은 같고, F(r) != G(r)이면 두 식은 다르
 H(x) = F(x) - G(x)라고 했을 때, 함수 H(x)의 해가 존재할 수 있는데, 그 해가 만약에 r일 경우 이 경우가 된다.<br />
 이 경우에는 알고리즘이 두 다항식이 같다고 하지만, 실제로는 다르다.<br />
 
-그렇지만 이 알고리즘은 매우 빠르고, 오류의 확률이 낮은 편이다. 이 부분은 챕터 3에서 이어서 설명한다. <br />
+그렇지만 이 알고리즘은 매우 빠르고, 오류의 확률이 낮은 편이다. 이 부분은 챕터 1.2에서 이어서 설명한다. <br />
 </p>
+
+<h4> 1.2 Axioms of Probability </h4>
+<p>
+확률 공간(probability space)에는3가지 요소가 있다.<br />
+<ol type="1">
+<li>sample space(Ω): 가능한 모든 결과의 집합</li>
+<li>F: 가능한 이벤트의 family of sets. sample space의 멱집합.</li>
+<li>Pr: 다음 정의 1.2를 만족하는 확률 함수 Pr: F -> R </li>
+</ol>
+
+정의 1.2
+어떤 확률함수 Pr: F->R 는 다음과 같은 조건을 만족한다.
+<ol type="1">
+<li>어떤 이벤트 E에 대해서 0<=Pr(E)<=1;</li>
+<li>Pr(Ω) = 1;</li>
+<li>서로 다른 분리된(disjoint) 이벤트 E1, E2에 대해서 Pr(E1∪E2) = Pr(E1) + Pr(E2) 이다.</li>
+</ol>
+
+다시 verifying polynomial identity 문제로 넘어와서...<br />
+{1,...,100d}에서 랜덤하게 뽑은 수가 F(x)-G(x)의 근이 되는 경우는 최대 d개<br />
+<br />
+따라서, Pr(algorithm fails)=Pr(E)<= d/100d = 1/100.<br />
+<br />
+알고리즘이 오답을 낼 수 있다는 것이 이상할 수 있지만, 랜덤 알고리즘(randomized algorithm)은 정확도(correctness)와 속도(speed) 간에 트레이드 오프를 한다.<br />
+<br />
+이 알고리즘은 두 다항식이 같지 않을 경우 1%의 확률로 오답을 낸다.<br />
+오답률을 줄이기 위해서는 다음과 같이 두 가지 방법이 있다.
+<ol type="1">
+<li>선택할 수 있는 숫자의 개수를 늘린다.<br />
+{1,...100d}까지가 아니라 {1,...,1000d}까지 숫자를 선택할 수 있다면,<br />
+알고리즘의 오답률은 0.1%로 떨어질 수 있다.<br />
+그렇지만 너무 큰 수를 이용해 다항식을 계산한다면, 컴퓨터의 계산속도가 느려질 수 있다.(BigNum Calculation)</li>
+<li>여러 번 수행<br />
+한 번 숫자를 선택해서 계산하지 않고, 여러 번 선택해서 계산한다.<br />
+선택할 경우마다 1%의 확률로 오답을 내기 때문에,<br />
+선택한 모든 숫자 k에 대해서 오답을 낼 확률은 (1/100)^k이다.<br /></li>
+</ol> 
+</p>
+
 
 
 [Horner's method]: https://en.wikipedia.org/wiki/Horner%27s_method
