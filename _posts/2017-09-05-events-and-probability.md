@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Events and Probability(Chapter One)"
+title: "Events and Probability(Chapter 1.1, 1.2)"
 date: 2017-09-06 00:45 +0900
 category: "Probability and Computing"
 ---
