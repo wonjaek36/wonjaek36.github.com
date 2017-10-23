@@ -31,15 +31,15 @@ Dr = 0이므로,<br />
 <img src="{{ site.url }}/assets/PAC_1.3.1.png" class="center-image" />
 <br />
 식을 r1에 대해서 풀어 쓰면, 다음과 같다.<br />
-<img src="{{ site.url }}/assets/PAC_1.3.2.png" class="center-image />
+<img src="{{ site.url }}/assets/PAC_1.3.2.png" class="center-image" />
 <br />
 이 때, 문제를 간소화하기 위해서 r1이전에 r2~rn까지 모든 원소들이 uniformly random하게 결정되어있다고 가정하자.<br />
 그러면 r1은 {0, 1} 두 수 중에서 하나의 숫자로 결정되기 때문에, 1/2 확률로 잘 못된 값이 나올 수 있다.<br />
 이러한 방식으로 문제를 해결하는 것을 "principle of deferred decisions"라고 한다.<br />
 <br />
 식으로 표현하자면 <br />
-<img src="{{ site.url }}/assets/PAC_1.3.3.png" class="center-image />
+<img src="{{ site.url }}/assets/PAC_1.3.3.png" class="center-image" />
 <br />
 Law of Probability<br />
-<img src="{{ site.url }}/assets/PAC_1.3.LOP.png" class="center-image />
+<img src="{{ site.url }}/assets/PAC_1.3.LOP.png" class="center-image" />
 </p>
