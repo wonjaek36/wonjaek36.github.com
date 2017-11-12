@@ -34,10 +34,10 @@ Last Sector, +sectors or +size{K,M,G} (2048-7796735, default 7796735): <push ent
 Command (m for help): t
 Hex code(type L to list codes): 6
 Command (m for help): w
-{% endhighlight %}
 
 sudo mkfs.vfat /dev/sdc1
+{% endhighlight %}
 </p>
 
-Reference: [AskUbuntu]
-[AskUbuntu]: https://askubuntu.com/questions/223598/how-to-format-a-usb-stick
+Reference: <a href="https://askubuntu.com/questions/223598/how-to-format-a-usb-stick>AskUbuntu</a>
+
