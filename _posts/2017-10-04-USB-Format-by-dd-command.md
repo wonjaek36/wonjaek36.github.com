@@ -39,5 +39,6 @@ sudo mkfs.vfat /dev/sdc1
 {% endhighlight %}
 </p>
 
-Reference: <a href="https://askubuntu.com/questions/223598/how-to-format-a-usb-stick>AskUbuntu</a>
+Reference: [AskUbuntu]
+[AskUbuntu]:	https://askubuntu.com/questions/223598/how-to-format-a-usb-stick
 
