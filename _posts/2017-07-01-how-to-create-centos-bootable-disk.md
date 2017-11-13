@@ -8,9 +8,9 @@ category: utils
 [Universial USB Installer]를 이용해서 CentOS Bootable Disk를 만들었더니,
 darcut time initqueue만 잔뜩 나오다가 결국 설치에 실패...
 
-정확한 이유는 모르겠지만, Universial USB Installer로는 CentOS 설치가 붕가능하다고 한다.
+정확한 이유는 모르겠지만, Universial USB Installer로는 CentOS 설치가 안 될 수 있다고 한다.
 
-방법을 찾아보다가 어느 StackOverflow 페이지에서,(페이지를 종료하는 바람에 링크는 없다.)
+어느 StackOverflow 페이지에서,(페이지를 종료하는 바람에 링크는 없다.)
 Windows의 경우에는 Win32Disk Imager를
 Linux의 경우에는 dd명령어를 이용을 권장했다.
 
