@@ -15,8 +15,8 @@ Mesos는 다음과 같은 특징을 갖고 있다.
     <li>PC 문제로 service가 Fail될 경우, 다른 PC에서 해당 service를 구동한다.(Fail-over)</li>
     <li>여러 scheduler를 사용하는 application을 구동할 수 있다.(hadoop, spark, MPI, marathon)</li>
 </ul>
-
-<h3>Architecture</h3>
+<br />
+<h3>2. Architecture</h3>
 
 <img src="{{ site.url }}/assets/mesos_architecture.png" class="center-image" />
 <br />
