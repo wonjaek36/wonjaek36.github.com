@@ -33,9 +33,9 @@ Zookeeper는 마스터의 Leader Election을 위해 사용한다.<br />
 	<li> Agent(Slave)가 Master와 연결되면서 가용가능한 자원의 정보를 전달한다.</li>
 	<li> Master가 Framework에게 현재 사용가능한 자원의 정보를 전달한다. </li>
 	<li> Framework는 Master에게 Task에 필요한 자원을 요청한다. </li>
-	<li> Master는 Framework가 전달해준 정보를 Agent에게 재 전달한다.
+	<li> Master는 Framework가 전달해준 정보를 Agent에게 재 전달한다.</li>
 </ol>
 
-Reference: [mesos paper]
+Reference: [Mesos Paper][mesospaper]
 
-[mesos paper]: https://people.eecs.berkeley.edu/~alig/papers/mesos.pdf
+[mesospaper]: 	https://people.eecs.berkeley.edu/~alig/papers/mesos.pdf
