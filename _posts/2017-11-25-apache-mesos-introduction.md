@@ -22,9 +22,11 @@ Mesos는 다음과 같은 특징을 갖고 있다.
 <br />
 Mesos Cluster는 Master, Agent 그리고 Zookeeper로 구성된다.<br />
 <br />
-Master는 프레임워크들이 주는 job들을 관리(스케줄링)하고, 요청한 자원들을 할당한다. <br />
-Agent는 가용 가능한 자원을 Master에 알리고, Master가 요청하는 작업들을 수행한다. <br />
-Zookeeper는 마스터의 Leader Election을 위해 사용한다.<br />
+<ul type-"circle">
+<li>Master는 프레임워크들이 주는 job들을 관리(스케줄링)하고, 요청한 자원들을 할당한다.</li>
+<li>Agent는 가용 가능한 자원을 Master에 알리고, Master가 요청하는 작업들을 수행한다.</li>
+<li>Zookeeper는 마스터의 Leader Election을 위해 사용한다.</li>
+</ul>
 <br />
 다음 그림을 통해 프레임워크, Master, Agent들이 어떻게 일을 진행하는지 알 수 있다.<br />
 <img src="{{ site.url }}/assets/mesos_working.png" class="center-image" />
@@ -35,6 +37,7 @@ Zookeeper는 마스터의 Leader Election을 위해 사용한다.<br />
 	<li> Framework는 Master에게 Task에 필요한 자원을 요청한다. </li>
 	<li> Master는 Framework가 전달해준 정보를 Agent에게 재 전달한다.</li>
 </ol>
+<br />
 
 Reference: [Mesos Paper][mesospaper]
 
