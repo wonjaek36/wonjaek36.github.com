@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div id="cover" class="container"
+     {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
+    <!-- <div>
+        <h1>{{ page.title | default: page.name }}</h1>
+        <p>All Posts in <strong>{{ page.name }}</strong></p>
+    </div> //-->
+
+    {% for tag in site.tags %}
+    	{{ tag.name }}
+    {% endfor %}
+</div>
+
+<div id="content" class="container">
+    <div id="tag-content" role="main">
+        <ul id="post-list">
+            {% for tag in site.tags %}
+            	{{ tag.name }} <br />
+            	<hr>
+				{% for post in site.posts %} 
+					{% if post.tags contains tag.name %}
+						{{ post.title }} <br />
+					{% endif %}
+               	{% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
