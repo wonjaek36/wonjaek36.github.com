@@ -2,29 +2,30 @@
 layout: default
 ---
 
-<div id="cover" class="container"
+<div id="tag-cover" class="container"
      {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
     <!-- <div>
         <h1>{{ page.title | default: page.name }}</h1>
         <p>All Posts in <strong>{{ page.name }}</strong></p>
     </div> //-->
-
+    <h1>Tags</h1>
     {% for tag in site.tags %}
-    	{{ tag.name }}
+    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{{ tag.name }}</span></a>
     {% endfor %}
 </div>
 
-<div id="content" class="container">
+<div id="tag-content" class="container">
     <div id="tag-content" role="main">
         <ul id="post-list">
             {% for tag in site.tags %}
-            	{{ tag.name }} <br />
-            	<hr>
+            	<h1 id="{{ tag.name }}">{{ tag.name }}</h1>
+                <div class="post-box">
 				{% for post in site.posts %} 
 					{% if post.tags contains tag.name %}
-						{{ post.title }} <br />
+						<a href="{{ post.url }}"><span class="post-list">{{ post.title }}</span></a> <br />
 					{% endif %}
                	{% endfor %}
+                </div>
             {% endfor %}
         </ul>
     </div>
