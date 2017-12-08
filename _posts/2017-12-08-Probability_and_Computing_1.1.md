@@ -13,5 +13,5 @@ Probability and Computing: Randomization and Probabilistic Techniques in Algorit
 <a href="{{ site.url }}/assets/Probability_and_Computing_1.1.pdf" class="center-image" >Download PDF file</a>
 
 <img src="{{ site.url }}/assets/Probability_and_Computing_1.1-1.jpg" class="center-image" /> <br />
-<img src="{{ site.url }}/assets/Probability_and_Computing_1.1-1.jpg" class="center-image" />
+<img src="{{ site.url }}/assets/Probability_and_Computing_1.1-2.jpg" class="center-image" />
 
