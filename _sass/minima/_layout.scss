@@ -200,11 +200,22 @@
   color: $grey-color;
 }
 
-.post-link {
-/* display: block;*/
-  @include relative-font-size(1.5);
-	margin: 0px;
-	padding: 0px;
+
+@media (max-width:560px) {
+  .post-link {
+  /* display: block;*/
+    @include relative-font-size(1.0);
+  	margin: 0px;
+  	padding: 0px;
+  }
+}
+@media (min-width: 561px) {
+  .post-link {
+  /* display: block;*/
+    @include relative-font-size(1.5);
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 /**
