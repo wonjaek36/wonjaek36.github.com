@@ -3,6 +3,7 @@ layout: post
 title: "Introduction to Kafka Architecture"
 date: 2017-08-23 10:45 +0900
 category: kafka
+tags: [kafka]
 ---
 
 <h3>1. Overview</h3> 

@@ -1,4 +1,4 @@
 ---
 name: mesos
-title: Apache mesos
+title: Apache Mesos
 ---

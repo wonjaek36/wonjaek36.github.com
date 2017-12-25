@@ -3,6 +3,7 @@ layout: post
 title: "Send Email by Ubuntu(Simple)"
 date: 2017-08-31 18:46 +0900
 category: "utils"
+tags: [ubuntu]
 ---
 
 리눅스에서 시간이 오래 걸리는 작업을 계속 진행해야만 했다. 작업이 끝나고 알람이 오도록 설정하고 싶어서 리눅스, 특히 우분투에서 메일을 보내는 방법을 알아보았다.<br />

@@ -3,6 +3,7 @@ layout: post
 title: "Jekyll SCSS 수정"
 date: 2017-07-25 19:04 +0900
 category: jekyll
+tags: [jekyll]
 ---
 
 원하는 jekyll theme가 딱히 없어서 커스터마이징을 하려는데, 상당히 어렵다.<br />

@@ -8,9 +8,9 @@ layout: default
         <h1>{{ page.title | default: page.name }}</h1>
         <p>All Posts in <strong>{{ page.name }}</strong></p>
     </div> //-->
-    <h1>Tags</h1>
+
     {% for tag in site.tags %}
-    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{{ tag.name }}</span></a>
+    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{% include tag.svg %}{{ tag.title }}</span></a>
     {% endfor %}
 </div>
 
@@ -18,15 +18,17 @@ layout: default
     <div id="tag-content" role="main">
         <ul id="post-list">
             {% for tag in site.tags %}
-            	<h1 id="{{ tag.name }}">{{ tag.name }}</h1>
-                <div class="post-box">
+            
+            	<h2 class="tag-title" id="{{ tag.name }}">{{ tag.title }}</h2>
+                <ul class="post-box">
 				{% for post in site.posts %} 
 					{% if post.tags contains tag.name %}
-						<a href="{{ post.url }}"><span class="post-list">{{ post.title }}</span></a> <br />
+						<li><a href="{{ post.url }}" class="tag-post-link">{{ post.title }}</a></li>
 					{% endif %}
                	{% endfor %}
-                </div>
+                </ul>
             {% endfor %}
         </ul>
     </div>
 </div>
+

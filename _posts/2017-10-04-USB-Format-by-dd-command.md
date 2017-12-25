@@ -3,6 +3,7 @@ layout: post
 title: "Format USB by dd command"
 date: 2017-10-04 12:16 +0900
 category: "utils"
+tags: [ubuntu, linux]
 ---
 <p>
 dd를 이용해서 CentOS USB를 만들고 나면 USB를 Windows나 Ubuntu disk utility로 partition을 제대로 인식하지 못한다.<br />
