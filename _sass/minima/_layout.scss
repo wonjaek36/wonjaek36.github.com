@@ -107,7 +107,9 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: 0;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
 }
 
 .footer-heading {
@@ -171,7 +173,6 @@
 }
 
 
-
 /**
  * Page content
  */
@@ -183,8 +184,10 @@
   @include relative-font-size(1.25);
 }
 
+
+
 .post-list {
-  margin-left: 0;
+  margin-left: 5%;
   list-style: none;
 
   > li {
@@ -199,13 +202,10 @@
 
 .post-link {
 /* display: block;*/
-  @include relative-font-size(1.0);
+  @include relative-font-size(1.5);
 	margin: 0px;
 	padding: 0px;
-	
 }
-
-
 
 /**
  * Posts
@@ -259,4 +259,28 @@
 .center-image {
 	margin: 0 auto;
 	display: block;
+}
+
+h1.page-heading {
+  margin-bottom: $spacing-unit / 3;
+}
+
+p.post-date {
+  @include relative-font-size(0.9);
+  color: gray;
+  margin-bottom: 0px;
+}
+
+.post-list-item {
+  margin-bottom: $spacing-unit / 2;
+}
+
+div.pagination_wrapper {
+  text-align: center;
+  margin-top: $spacing-unit;
+}
+div.pagination {
+  display: inline-block;
+  margin: auto;
+  width: auto;
 }

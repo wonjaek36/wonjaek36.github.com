@@ -13,14 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: White-Weasel's Story
+
+title: Wonjae's Note
+author: Wonjae Kim
 email: wonjaek36@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  White-Weasel's Story
+  Wonjae's Note
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wonjaek36.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: wonjaek36
-
+linkedin_username: wonjaek36
 # Build settings
 markdown: kramdown
 theme: minima
@@ -39,7 +41,12 @@ defaults:
       type: tags
     values:
       layout: tags
-      
+
+# plugins
+gems: [jekyll-paginate]
+
+paginate: 5
+# paginate_path: "/page:num"
 
 
 # Exclude from processing.

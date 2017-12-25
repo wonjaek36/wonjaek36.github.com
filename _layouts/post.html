@@ -9,7 +9,7 @@ layout: default
 			<span>
 				{{ page.categories }}
 			</span>
-			 / 
+			  
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
@@ -28,3 +28,11 @@ layout: default
     {% include disqus_comments.html %}
   {% endif %}
 </article>
+
+<div>
+  <ul class="post-list">
+  {% for post in paginator.posts %}
+    <li>{{ post.title }}</li>
+  {% endfor %}
+  </ul>
+</div>
