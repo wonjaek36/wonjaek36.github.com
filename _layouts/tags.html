@@ -19,11 +19,11 @@ layout: default
         <ul id="post-list">
             {% for tag in site.tags %}
             
-            	<h2 class="tag-title" id="{{ tag.name }}">{{ tag.title }}</h2>
+            	<h2 class="tag-title" id="{{ tag.name }}">{% include folders.svg %}{{ tag.title }}</h2>
                 <ul class="post-box">
 				{% for post in site.posts %} 
 					{% if post.tags contains tag.name %}
-						<li><a href="{{ post.url }}" class="tag-post-link">{{ post.title }}</a></li>
+						<li><a href="{{ post.url }}" class="tag-post-link">{% include file.svg %}{{ post.title }}</a></li>
 					{% endif %}
                	{% endfor %}
                 </ul>
