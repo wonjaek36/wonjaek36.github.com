@@ -7,13 +7,13 @@ tags: [mesos]
 ---
 
 <h3>1. Overview</h3>
-Mesos는 Berkely 대학에서 개발한 DC/OS이다. DC/OS는 Data-Center Operating System으로 Data-Center 내 다수의 컴퓨터를 마치 하나의 컴퓨터처럼 사용할 수 있도록, 자원(cpu, memory, disk 등)을 추상화한다.<br />
-Data Center에서 동작하는 application들은 마치 운영체제가 제공하듯이, Mesos가 제공하는 자원을 이용해 동작한다. <br />
+Mesos는 Berkely 대학에서 개발한 DC/OS이다. DC/OS는 Data-Center Operating System를 나타내며, Data-Center 내 다수의 컴퓨터를 마치 하나의 컴퓨터처럼 사용할 수 있도록, 자원(cpu, memory, disk 등)을 추상화한다.<br />
+사용자가 Application을 돌릴 때, 운영체제에 의해 자동으로 자원이 할당되듯이, Data Center에서 동작하는 Application들은 Mesos가 제공하는 자원을 할당받는다.<br />
 <br />
 Mesos는 다음과 같은 특징을 갖고 있다.
 <ul type="circle">
     <li>데이터 센터 내 PC 당 불특정한 service 또는 application을 여러 개 돌릴 수 있다. (애플리케이션의 자원소비 및 각 PC의 자원 상태에 따라서 조정된다.)</li>
-    <li>PC 문제로 service가 Fail될 경우, 다른 PC에서 해당 service를 구동한다.(Fail-over)</li>
+    <li>Service를 구동하던 PC가 Fail될 경우, 다른 자원(PC)에서 해당 service를 구동한다.(Fail-over)</li>
     <li>여러 scheduler를 사용하는 application을 구동할 수 있다.(hadoop, spark, MPI, marathon)</li>
 </ul>
 <br />
