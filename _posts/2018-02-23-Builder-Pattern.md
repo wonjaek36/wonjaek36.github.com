@@ -25,7 +25,7 @@ public class Broker {
 		private final String ip;
 		private final Integer port;
 		private String name = ""; //initialize default value
-		private List<String> neighbor = NULL; //initialize default value;
+		private List<String> neighbor = null; //initialize default value;
 
 		public Builder(String ip, Integer port) {
 			this.ip = ip;
