@@ -6,9 +6,9 @@ category: "jekyll"
 tags: [ubuntu, jekyll]
 ---
 
-Environment: Ubuntu 18.04 Desktop
-Required: Root privilege 
-[Official Documentation](https://jekyllrb.com/docs/installation/)
+Environment: Ubuntu 18.04 Desktop  
+Required: Root privilege   
+[Official Documentation](https://jekyllrb.com/docs/installation/)  
 
 ### 1. Install Ruby
   
