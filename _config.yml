@@ -36,12 +36,12 @@ sass:
 
 collections:
   tags:
-    output: true
+    output: false
     permalink: /tags/:path
 
   TILs:
-    output: true
-    permalink: /TILs/:path
+#    output: false
+#    permalink: /TILs/
 
 defaults:
   - scope:
