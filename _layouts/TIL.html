@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div id="TIL title">
+    <h1>Today I Learned & Did</h1>
+</div>
+
+{% for til in site.TILs %}
+    <div id="TIL-wrapper" class="container">
+        <div id="TIL-date">
+            <h2>
+            <time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">
+                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                {{ til.date | date: date_format }}
+            </time>
+            </h2>
+        </div>
+
+        <div id="TIL-content">
+            {{ til.content }}
+        </div>
+    </div>
+    
+{% endfor %}

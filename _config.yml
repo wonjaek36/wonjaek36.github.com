@@ -24,16 +24,24 @@ url: "https://wonjaek36.github.io" # the base hostname & protocol for your site,
 github_username: wonjaek36
 linkedin_username: wonjaek36
 # Build settings
+
 markdown: kramdown
 theme: minima
+
 plugins:
   - jekyll-feed
+
 sass:
   sass_dir: _sass
+
 collections:
   tags:
     output: true
     permalink: /tags/:path
+
+  TILs:
+    output: true
+    permalink: /TILs/:path
 
 defaults:
   - scope:
@@ -60,3 +68,6 @@ paginate: 5
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# {% for tag in site.tags %}
+#    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{% include tag.svg %}{{ tag.title }}</span></a>
+#    {% endfor %}
