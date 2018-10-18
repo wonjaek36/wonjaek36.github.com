@@ -47,7 +47,6 @@ defaults:
   - scope:
       path: "/tils/*"
     values:
-      layout: "til"
       categoriy: "til"
 
 # plugins
