@@ -22,5 +22,5 @@ collection:
 그리고 collection과 관련된 문서는 \_<collection name>에 저장  
 (\_tags 폴더 내에 tag 문서들을 저장)  
 
-P.S. layout에서 개별 포스터의 title이나 date에 접근할 때, collection의 이름이 아닌, page로 접근하면 된다.  
+P.S. layout에서 개별 포스터의 title이나 date에 접근할 때, collection의 이름이 아닌 page로 접근한다.  
 (즉, tag 페이지에서도 tag.title이 아닌, page.title로 문서의 제목에 접근할 수 있다.)
