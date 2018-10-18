@@ -43,12 +43,12 @@ collections:
     output: true
     permalink: /:collection/:name
 
-# defaults:
-#  - scope:
-#      path: "/tils"
-#      type: til
-#    values:
-#      layout: til
+defaults:
+  - scope:
+      path: "/tils/*"
+    values:
+      layout: "til"
+      categoriy: "til"
 
 # plugins
 plugins: [jekyll-paginate]
