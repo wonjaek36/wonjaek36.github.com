@@ -1,5 +1,5 @@
 ---
 layout: tils
 title: "TIL"
-permalink: /TILs/
+permalink: /tils/
 ---
