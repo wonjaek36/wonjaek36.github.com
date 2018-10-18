@@ -14,7 +14,7 @@ layout: default
         <a href="{{ til.url }}" class="tag-post-link">
             <time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">
                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                {{ til.date | date: date_format }}
+                {{ til.date | date: date_format }} - 
                 {{ til.title | escape }}
             </time>
         </a>

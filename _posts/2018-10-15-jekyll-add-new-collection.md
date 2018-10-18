@@ -7,16 +7,20 @@ tags: [jekyll]
 
 Environment: Windows 10, ruby 2.4, gem 2.7.6  
 
-새로운 collection을 추가하고자 할 때, \_config.yml 파일에 다음과 같이 추가  
-이 문서에서는 tag를 추가  
+새로운 collection을 추가하고자 할 때, \_config.yml 파일 내 collection에 추가  
+(이 문서에서는 tag를 추가)  
 
 {% highlight shell %}
 ...
 collection:
 	tags: 
-		permalink: /tags/:path
+		output: true
+		permalink: /:collection/:name
 ...
 {% endhighlight %}
+  
+그리고 collection과 관련된 문서는 \_<collection name>에 저장  
+(\_tags 폴더 내에 tag 문서들을 저장)  
 
-그리고, 다른 html에서 site.<new collection> 으로 접근할 수 있다.  
-
+P.S. layout에서 개별 포스터의 title이나 date에 접근할 때, collection의 이름이 아닌, page로 접근하면 된다.  
+(즉, tag 페이지에서도 tag.title이 아닌, page.title로 문서의 제목에 접근할 수 있다.)
