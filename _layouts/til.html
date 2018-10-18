@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<article class="TIL" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="TIL-header">
+    <h1 class="TIL-title" itemprop="name headline">
+      <time datetime="{{ TIL.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+    </h1>
+    <h2 class="TIL-subtitle">
+			<span>
+				{{ page.title | escape }}
+			</span>
+    </h2>
+  </header>
+
+  <div class="TIL-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
+
+<!-- 
+<div>
+  <ul class="TIL-list">
+  {% for post in paginator.posts %}
+    <li>{{ post.title }}</li>
+  {% endfor %}
+  </ul>
+</div>
+//-->
