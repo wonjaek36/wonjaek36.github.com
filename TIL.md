@@ -1,5 +1,5 @@
 ---
-layout: TIL
+layout: tils
 title: "TIL"
 permalink: /TILs/
 ---
