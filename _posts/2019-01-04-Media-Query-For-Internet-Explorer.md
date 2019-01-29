@@ -2,7 +2,7 @@
 layout: post
 title: "Media Query for Internet Explorer"
 date: 2019-01-04 23:15 +0900
-tags: css, "Internet Explorer"
+tags: [css, ie]
 ---
 
 Internet Explorer에만 필요한 css를 설정해줘야할 때가 있다.  
