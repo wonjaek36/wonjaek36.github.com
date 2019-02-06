@@ -2,7 +2,7 @@
 layout: post
 title: "Python string to int type cast"
 date: 2019-01-08 23:15 +0900
-tags: [Python]
+tags: [python]
 ---
 
 파이썬에서는 숫자로 구성된 문자열을 정수로 변환할 때, 아래 코드와 같이 구현한다.  
