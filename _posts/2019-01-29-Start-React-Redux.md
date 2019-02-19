@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Redux with React"
+title: "Redux Example Code with React"
 date: 2019-01-29 15:36 +0900
 tags: [react, redux]
 ---
@@ -27,12 +27,12 @@ $ yarn add --save redux react-redux
 {% highlight shell %}
 src
 ├── actions
-│        └── index.js
+│       └── index.js
 ├── components
-│        └── App.js
+│       └── App.js
 ├── index.js
 └── reducers
-    └── index.js
+        └── index.js
 {% endhighlight %}
 
 ### Action index.js example
@@ -94,3 +94,5 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 {% endhighlight javascript %}
+
+[Official Document](https://redux.js.org/basics/basic-tutorial)
