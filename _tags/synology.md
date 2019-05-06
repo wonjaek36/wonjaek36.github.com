@@ -1,0 +1,4 @@
+---
+name: synology
+title: Synology
+---
