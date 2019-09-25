@@ -23,4 +23,4 @@ powershell 또는 cmd가 dd와 비슷한 명령어를 지원하는지 몰라서 
 
 Partition과 Target System은 상황에 맞게 설정하고, 마지막 Start에서 ISO 옵션 또는 dd 옵션을 설정하여, Ubuntu USB와 CentOS USB를 동시에 필요에 맞춰 만들 수 있다.  
 
-![Rufus dd command](/assets/rufus01.jpg){: .center-image}
+![Rufus dd command](/assets/rufus01.jpg =250x){: .center-image}
