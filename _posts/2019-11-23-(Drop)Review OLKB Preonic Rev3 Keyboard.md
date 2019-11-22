@@ -21,6 +21,7 @@ Drop(구 Massdrop)에서 판매하는 OLKB Preonic Rev3 레이아웃 키보드�
 ![Open Box](/assets/preonic/preonic1.jpg){: .center-image width="50%"}
 
 ![Display](/assets/preonic/preonic2.jpg){: .center-image width="50%"}
+
 조립 순서는 처음이라 많이 헷갈려서, 조립 분해를 몇 번이고 했다.
 맨 처음에는 PCB기판 → 축 → 알류미늄 판 순서로 해나갔더니, 판과 볼트사이가 맞지 않아서 고정이 되지 않았고, 
 두 번째로 PCB → 알류미늄 판 → 축 → 밑판 순으로 조립했더니, 밑판이랑 연결이 불가능했다.
@@ -30,9 +31,11 @@ Drop(구 Massdrop)에서 판매하는 OLKB Preonic Rev3 레이아웃 키보드�
 밑판 → PCB → 알류미늄판 → 축 순이다.
 
 ![Wrong assemble](/assets/preonic/preonic3.jpg){: .center-image width="50%"}
+
 (축을 똑똑 끼면서 좋아했지만, 결국 다 뺐...)
 
 ![Ongoing](/assets/preonic/preonic4.jpg){: .center-image width="50%"}
+
 (미리 PCB 위에 알류미늄 커버를 장착하고 축을 끼면 된다.)
 
 ![Finish](/assets/preonic/preonic5.jpg){: .center-image width="50%"}
@@ -44,5 +47,5 @@ Drop(구 Massdrop)에서 판매하는 OLKB Preonic Rev3 레이아웃 키보드�
 
 파우치도 깔끔하고 예쁘다. 그리고 키보드의 보라색이 정말 예쁘다. 회색과 안 어울리고 어색하지 않을까 싶었는데, 그냥 예뻤다. 문제는 레이아웃이 워낙 특이해서, 언제 익숙해지나 싶다.
 
-Reference
+Reference  
 [1] OLKB: [https://olkb.com](https://olkb.com)
