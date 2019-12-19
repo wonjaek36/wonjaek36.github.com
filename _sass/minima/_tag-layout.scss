@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+a.tag-anchor {
+
+	.icon.icon-tag > svg {
+		fill: $a-color;
+	}
+}
+
+a.tag-anchor:visited {
+
+	.icon.icon-tag > svg {
+		fill: $a-visited-color;
+	}
+}
+
+a.tag-anchor:hover {
+	
+	.icon.icon-tag > svg {
+		fill: $a-hover-color;
+	}	
+}
+
+
+/////////////////tag scss///////////
+span.tag-list {
+  margin-right: $spacing-unit / 2;
+  white-space: nowrap;
+}
+#tag-cover {
+  margin-bottom: $spacing-unit;
+}
+ul.post-box {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: $spacing-unit;
+}
+h2.tag-title {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+@media only screen
+ and (max-width:560px) {
+  a.tag-post-link {
+    @include relative-font-size(1.0);
+  }
+}
+@media only screen
+ and (min-width: 561px) {
+  a.tag-post-link { 
+    @include relative-font-size(1.25);
+  }
+}

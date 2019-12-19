@@ -199,8 +199,12 @@ pre {
  * Icons
  */
 .icon > svg {
+  
   display: inline-block;
   vertical-align: middle;
+}
+
+.icon.icon-linkedin > svg {
 
   path {
     fill: $grey-color;

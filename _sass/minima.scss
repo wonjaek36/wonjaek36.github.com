@@ -18,6 +18,10 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
+$a-color: #2a7ae2 !default;
+$a-visited-color: #1756a9 !default;
+$a-hover-color: #000000 !default;
+
 // Width of the content area
 $content-width:    800px !default;
 
@@ -46,7 +50,8 @@ $on-laptop:        800px !default;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "minima/TIL"
+  "minima/TIL",
+  "minima/tag-layout"
 ;
 
 .center-image

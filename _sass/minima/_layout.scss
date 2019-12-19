@@ -304,38 +304,6 @@ div.pagination {
   width: auto;
 }
 
-
-/////////////////tag scss///////////
-span.tag-list {
-  margin-left: $spacing-unit / 2;
-  white-space: nowrap;
-}
-#tag-cover {
-  margin-bottom: $spacing-unit;
-}
-ul.post-box {
-  list-style-type: none;
-  padding-left: 0px;
-  margin-left: $spacing-unit;
-}
-h2.tag-title {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-@media only screen
- and (max-width:560px) {
-  a.tag-post-link {
-    @include relative-font-size(1.0);
-  }
-}
-@media only screen
- and (min-width: 561px) {
-  a.tag-post-link { 
-    @include relative-font-size(1.25);
-  }
-}
-
-
 //////////////////TIL/////////////////////
 
 .TIL-content {

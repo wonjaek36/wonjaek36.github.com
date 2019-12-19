@@ -4,13 +4,10 @@ layout: default
 
 <div id="tag-cover" class="container"
      {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
-    <!-- <div>
-        <h1>{{ page.title | default: page.name }}</h1>
-        <p>All Posts in <strong>{{ page.name }}</strong></p>
-    </div> //-->
+    
 
     {% for tag in site.tags %}
-    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{% include tag.svg %}{{ tag.title }}</span></a>
+    	<a class="tag-anchor" href="#{{ tag.name }}"><span class="tag-list">{% include icon-tag.html %}{{ tag.title }}</span></a>
     {% endfor %}
 </div>
 
@@ -19,11 +16,11 @@ layout: default
         <ul id="post-list">
             {% for tag in site.tags %}
             
-            	<h2 class="tag-title" id="{{ tag.name }}">{% include folders.svg %}{{ tag.title }}</h2>
+            	<h2 class="tag-title" id="{{ tag.name }}">{{ tag.title }}</h2>
                 <ul class="post-box">
 				{% for post in site.posts %} 
 					{% if post.tags contains tag.name %}
-						<li><a href="{{ post.url }}" class="tag-post-link">{% include file.svg %}{{ post.title }}</a></li>
+						<li><a href="{{ post.url }}" class="tag-post-link">{{ post.title }}</a></li>
 					{% endif %}
                	{% endfor %}
                 </ul>

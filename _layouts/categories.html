@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div id="category-cover" class="container"
+     {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
+    
+    {% assign categories = site.categories %}
+    
+    <ul class="cover-category-list">
+        {% for category in categories %}
+        	{% if category.level == 1 %}
+                <li class="cover-category-item">
+                {{ category.title }}
+                    <p class="cover-subcategory-list">
+                    {% for subcategory in categories %}
+                        {% if subcategory.level == 2 and subcategory.parent == category.name %}
+                            {{ subcategory.title }}
+                        {% endif %}
+                    {% endfor %}
+                    </p>
+                </li>
+        	{% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+<div id="category-content-wrapper" class="container">
+    <div id="category-content" role="main">
+        <ul id="category-list">
+
+            {% for category in categories %}
+                {% if category.level == 1 %}
+
+                    <li>{{ category.title }}
+                    {% assign category1_name = category.name %}
+
+                        <ul id="subcategory-list">
+                            {% for subcategory in categories %}
+                                {% if subcategory.level == 2 and subcategory.parent == category1_name %}
+                                    
+                                    <li>{{ subcategory.title }}
+                                    {% assign category2_name = subcategory.name %}
+
+                                        <ul id="subcategory-item-list">
+                                        {% for post in site.posts %} 
+
+                                            {% if post.categories.size < 2 %}
+                                                {% continue %}
+                                            {% endif %}
+
+                                            {% if post.categories[0] != category1_name %}
+                                                {% continue %}
+                                            {% endif %} 
+
+                                            {% if post.categories[1] != category2_name %}
+                                                {% continue %}
+                                            {% endif %}
+                                            
+                                            <li id="subcategory-item"><a href="{{ post.url }}" class="">{{ post.title }}</a></li>
+                                            
+                                        {% endfor %}
+                                        </ul>
+
+                                    </li>
+
+                                {% endif %}
+                            {% endfor %}
+
+                            <li id="subcategory-item">Other</li>
+                        </ul>
+
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Create CentOS Bootable Disk"
 date: 2017-07-01 19:09 +0900
-category: utils
+categories: [linux, centos]
 tags: [centos, linux]
 ---
 

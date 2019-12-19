@@ -45,8 +45,18 @@ defaults:
     values:
       layout: tags
 
+  - scope:
+      path: "categories"
+      type: categories
+    values:
+      layout: default
+
 collections:
+  
   tags:
+    output: false
+  
+  categories:
     output: false
 
 
@@ -61,6 +71,3 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-# {% for tag in site.tags %}
-#    	<a class="" href="#{{ tag.name }}"><span class="tag-list">{% include tag.svg %}{{ tag.title }}</span></a>
-#    {% endfor %}
