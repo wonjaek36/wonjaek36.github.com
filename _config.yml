@@ -33,27 +33,19 @@ plugins:
 
 sass:
   sass_dir: _sass
-
-collections:
   tags:
     output: false
     permalink: /tags/:path
 
-  tils:
-    output: true
-    permalink: /:collection/:name
-
 defaults:
-  - scope:
-      path: "/tils/*"
-    values:
-      categoriy: "til"
 
 # plugins
 plugins: [jekyll-paginate]
 
 paginate: 7
 # paginate_path: "/page:num"
+
+collection:
 
 
 # Exclude from processing.
