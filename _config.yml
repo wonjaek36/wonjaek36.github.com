@@ -30,22 +30,24 @@ theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 sass:
   sass_dir: _sass
-  tags:
-    output: false
-    permalink: /tags/:path
-
-defaults:
-
-# plugins
-plugins: [jekyll-paginate]
 
 paginate: 7
 # paginate_path: "/page:num"
 
-collection:
+defaults:
+  - scope:
+      path: "tags"
+      type: tags
+    values:
+      layout: tags
+
+collections:
+  tags:
+    output: false
 
 
 # Exclude from processing.
