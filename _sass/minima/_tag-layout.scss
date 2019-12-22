@@ -63,8 +63,11 @@ a.tag-anchor {
   span.tag-list {
     //margin-right: $spacing-unit / 2;
     white-space: nowrap;
-    padding: 0.3em;
-    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-right: 0.4em;
+    padding-bottom: 0.2em;
+    padding-left: 0.2em;
+    line-height: 1.8em;
   }
 }
 a.tag-anchor-clicked {
@@ -72,8 +75,11 @@ a.tag-anchor-clicked {
     border-radius: 10px;
     background-color: $tag-clicked-background-color;
     white-space: nowrap;
-    padding: 0.3em;
-    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-right: 0.4em;
+    padding-bottom: 0.3em;
+    padding-left: 0.2em;
+    line-height: 1.8em;
   }
 }
 
