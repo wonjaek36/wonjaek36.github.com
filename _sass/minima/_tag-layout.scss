@@ -1,32 +1,82 @@
 @charset "utf-8";
 
 a.tag-anchor {
-
 	.icon.icon-tag > svg {
-		fill: $a-color;
+		fill: $tag-color;
 	}
+  color: $tag-color;
 }
 
 a.tag-anchor:visited {
-
 	.icon.icon-tag > svg {
-		fill: $a-visited-color;
+		fill: $tag-color;
 	}
+  color: $tag-color;
 }
 
 a.tag-anchor:hover {
-	
+
 	.icon.icon-tag > svg {
-		fill: $a-hover-color;
-	}	
+		fill: $tag-hover-color;
+	}
+  color: $tag-hover-color;
+  cursor: pointer;
 }
 
+a.tag-anchor-clicked {
+  .icon.icon-tag > svg {
+    fill: $tag-clicked-color;
+  }
+  color: $tag-clicked-color;
+}
+
+a.tag-anchor-clicked:hover {
+  cursor:pointer;
+}
+
+//-------------------------
+
+a.tag-post-link {
+  .icon.icon-post > svg {
+    fill: $a-color;
+  }
+}
+
+a.tag-post-link:visited {
+  .icon.icon-post > svg {
+    fill: $a-visited-color;
+  }
+}
+
+a.tag-post-link:hover {
+  .icon.icon-post > svg {
+    fill: $a-hover-color;
+  } 
+}
+
+ul#post-list {
+  list-style: none;  
+}
 
 /////////////////tag scss///////////
-span.tag-list {
-  margin-right: $spacing-unit / 2;
-  white-space: nowrap;
+a.tag-anchor {
+  span.tag-list {
+    //margin-right: $spacing-unit / 2;
+    white-space: nowrap;
+    padding: 0.3em;
+    padding-right: 0.5em;
+  }
 }
+a.tag-anchor-clicked {
+  span.tag-list {
+    border-radius: 10px;
+    background-color: $tag-clicked-background-color;
+    white-space: nowrap;
+    padding: 0.3em;
+    padding-right: 0.5em;
+  }
+}
+
 #tag-cover {
   margin-bottom: $spacing-unit;
 }

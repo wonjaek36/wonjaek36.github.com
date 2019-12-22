@@ -7,25 +7,65 @@ layout: default
     
 
     {% for tag in site.tags %}
-    	<a class="tag-anchor" href="#{{ tag.name }}"><span class="tag-list">{% include icon-tag.html %}{{ tag.title }}</span></a>
-    {% endfor %}
+    	<a class="tag-anchor" id="{{ tag.name }}" onclick="toggleTag('{{ tag.name }}')"><span class="tag-list">{% include icon-tag.html %}{{ tag.title }}</span></a>{% endfor %}
 </div>
 
-<div id="tag-content" class="container">
+<div id="tag-content-wrapper" class="container">
     <div id="tag-content" role="main">
         <ul id="post-list">
-            {% for tag in site.tags %}
-            
-            	<h2 class="tag-title" id="{{ tag.name }}">{{ tag.title }}</h2>
-                <ul class="post-box">
-				{% for post in site.posts %} 
-					{% if post.tags contains tag.name %}
-						<li><a href="{{ post.url }}" class="tag-post-link">{{ post.title }}</a></li>
-					{% endif %}
-               	{% endfor %}
-                </ul>
+            {% for post in site.posts %}
+                {% assign tagClasses = post.tags | join: " " %}
+                <li class="post-item {{ tagClasses }}"><a href="{{ post.url }}" id="{{ tag.name }}" class="tag-post-link">{% include icon-post.html %}{{ post.title }}</a></li>
             {% endfor %}
         </ul>
     </div>
 </div>
 
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script>
+
+    var selected_tags = [];
+    $(document).ready(
+        function init(){
+        
+            showPostWithTags();
+            console.log(selected_tags);
+        }
+    );
+
+    function toggleTag(tagID) {
+
+        let tag_loc = selected_tags.indexOf(tagID);
+        
+        if (tag_loc == -1) {
+
+            selected_tags.push(tagID)    
+        } 
+        else {
+
+            selected_tags.splice(tag_loc, 1);
+        }
+
+        $('#'+tagID).toggleClass('tag-anchor tag-anchor-clicked');
+        showPostWithTags();
+    }
+
+    function showPostWithTags() {
+
+        if (selected_tags.length == 0) {
+            $('.post-item').css('display', 'block');
+        } else {
+            $('.post-item').css('display', 'none');
+            for(let i=0;i<selected_tags.length;i++) {
+                $('.'+selected_tags[i]).css('display', 'block');
+            }
+        }
+    }
+
+
+</script>
