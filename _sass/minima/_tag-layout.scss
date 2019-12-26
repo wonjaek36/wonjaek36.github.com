@@ -6,14 +6,6 @@ a.tag-anchor {
 	}
   color: $tag-color;
 }
-
-a.tag-anchor:visited {
-	.icon.icon-tag > svg {
-		fill: $tag-color;
-	}
-  color: $tag-color;
-}
-
 a.tag-anchor:hover {
 
 	.icon.icon-tag > svg {
@@ -23,13 +15,13 @@ a.tag-anchor:hover {
   cursor: pointer;
 }
 
+
 a.tag-anchor-clicked {
   .icon.icon-tag > svg {
     fill: $tag-clicked-color;
   }
   color: $tag-clicked-color;
 }
-
 a.tag-anchor-clicked:hover {
   cursor:pointer;
 }
@@ -68,6 +60,11 @@ a.tag-anchor {
     padding-bottom: 0.2em;
     padding-left: 0.2em;
     line-height: 1.8em;
+    
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition:all 1s;
   }
 }
 a.tag-anchor-clicked {
@@ -80,6 +77,11 @@ a.tag-anchor-clicked {
     padding-bottom: 0.3em;
     padding-left: 0.2em;
     line-height: 1.8em;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition:all 1s;
   }
 }
 

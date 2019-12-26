@@ -34,7 +34,6 @@ layout: default
         function init(){
         
             showPostWithTags();
-            console.log(selected_tags);
         }
     );
 
@@ -43,11 +42,9 @@ layout: default
         let tag_loc = selected_tags.indexOf(tagID);
         
         if (tag_loc == -1) {
-
             selected_tags.push(tagID)    
         } 
         else {
-
             selected_tags.splice(tag_loc, 1);
         }
 
@@ -58,12 +55,22 @@ layout: default
     function showPostWithTags() {
 
         if (selected_tags.length == 0) {
-            $('.post-item').css('display', 'block');
+            //$('.post-item').css('display', 'block');
+            $('.post-item').show(1000);
         } else {
-            $('.post-item').css('display', 'none');
+            //$('.post-item').css('display', 'none');
+            //$('.post-item').delay(2500).fadeIn();
+            $('.post-item').css({
+                "display": "none"
+            });
             for(let i=0;i<selected_tags.length;i++) {
-                $('.'+selected_tags[i]).css('display', 'block');
+                $('.'+selected_tags[i]).show(1000);
             }
+
+            /*$('.post-item').delay(2500).fadeIn();
+            for(let i=0;i<selected_tags.length;i++) {
+                $('.'+selected_tags[i]).show(1500);
+            }*/
         }
     }
 
