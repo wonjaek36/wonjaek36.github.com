@@ -11,11 +11,11 @@ layout: default
         {% for category in categories %}
         	{% if category.level == 1 %}
                 <li class="cover-category-item">
-                {{ category.title }}
+                {% include icon-category.html %}<span class="cover-category-title">{{ category.title }}</span>
                     <p class="cover-subcategory-list">
                     {% for subcategory in categories %}
                         {% if subcategory.level == 2 and subcategory.parent == category.name %}
-                            {{ subcategory.title }}
+                            <span class="cover-subcategory-item">{{ subcategory.title }}</span>
                         {% endif %}
                     {% endfor %}
                     </p>
