@@ -2,6 +2,7 @@
 layout: post
 title: "Redux Example Code with React"
 date: 2019-01-29 15:36 +0900
+category: []
 tags: [react, redux]
 ---
 

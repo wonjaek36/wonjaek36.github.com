@@ -2,6 +2,7 @@
 layout: post
 title: "Rufus: create bootable usb on Windows"
 date: 2019-09-26 01:53 +0900
+category: []
 tags: []
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Premade Estimators"
 date: 2018-08-18 12:10 +0900
-category: tensorflow
-tags: [tensorflow]
+category: []
+tags: []
 ---
 
 [원문](https://www.tensorflow.org/guide/premade_estimators)

@@ -2,8 +2,8 @@
 layout: post
 title: "Elasticsearch removal of mapping type"
 date: 2018-01-26 11:30 +0900
-category: elk
-tags: [elk]
+category: [platform, elasticsearch]
+tags: [platform, elasticsearch]
 ---
 
 **Elasticsearch가 7.0 버전부터는 공식적으로 \_type을 지원하지 않기로 결정하였다.** 6.0 버전에서는 deprecated 처리되었으며, \_type을 사용할 경우 warn 메시지를 내보낸다.

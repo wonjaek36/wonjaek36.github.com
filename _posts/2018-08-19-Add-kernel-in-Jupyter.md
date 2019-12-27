@@ -2,8 +2,8 @@
 layout: post
 title: "Managing kernels in Jupyter(Python 3.6)"
 date: 2018-08-19 20:24 +0900
-category: "jupyter"
-tags: [python3, jupyter]
+category: []
+tags: []
 ---
 
 Environment: Python3.6, Ubuntu Desktop 18.04  

@@ -2,6 +2,7 @@
 layout: post
 title: "Swap disk in Synology"
 date: 2019-06-19 09:44 +0900
+category: []
 tags: [synology]
 ---
 

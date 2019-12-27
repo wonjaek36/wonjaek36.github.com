@@ -2,6 +2,7 @@
 layout: post
 title: "(Drop) Review OLKB Preonic Rev3 Keyboard"
 date: 2019-11-23 02:37 +0900
+category: []
 tags: [keyboard]
 ---
 

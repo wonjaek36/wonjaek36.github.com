@@ -2,7 +2,8 @@
 layout: post
 title: "Add new collection in Jekyll"
 date: 2018-10-15 12:15 +0900
-tags: [jekyll]
+category: []
+tags: []
 ---
 
 Environment: Windows 10, ruby 2.4, gem 2.7.6  

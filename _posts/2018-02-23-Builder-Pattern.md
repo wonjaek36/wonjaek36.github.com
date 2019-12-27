@@ -2,8 +2,8 @@
 layout: post
 title: "Builder Pattern"
 date: 2018-02-23 16:55 +0900
-category: pattern
-tags: [pattern, java]
+category: [development, design_pattern]
+tags: [design_pattern, java]
 ---
 
 빌더(Builder) 패턴은 생성자의 인자가 많을 때, 그리고 다수의 인자들이 필수가 아닌 선택적(optional)할 때 사용하면 편리하다.
@@ -15,48 +15,48 @@ tags: [pattern, java]
 다음은 빌더 패턴의 예제코드이다. 
 {% highlight java %}
 public class Broker {
-	
-	private String ip; // necessary parameter
-	private Integer port; // necessary paramter
-	private String name; // optional parameter
-	private List<String> neighbor; //optional parameter
+    
+    private String ip; // necessary parameter
+    private Integer port; // necessary paramter
+    private String name; // optional parameter
+    private List<String> neighbor; //optional parameter
 
-	public static class Builder {
-		private final String ip;
-		private final Integer port;
-		private String name = ""; //initialize default value
-		private List<String> neighbor = null; //initialize default value;
+    public static class Builder {
+        private final String ip;
+        private final Integer port;
+        private String name = ""; //initialize default value
+        private List<String> neighbor = null; //initialize default value;
 
-		public Builder(String ip, Integer port) {
-			this.ip = ip;
-			this.port = port;
-		}
-		public Builder setName(String name) {
-			this.name = name;
-			return this;
-		}
-		public Builder setNeighbor(List<String> neighbor) {
-			this.neighbor = neighbor;
-			return this;
-		}
+        public Builder(String ip, Integer port) {
+            this.ip = ip;
+            this.port = port;
+        }
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public Builder setNeighbor(List<String> neighbor) {
+            this.neighbor = neighbor;
+            return this;
+        }
 
-		public Broker build() {
-			return new Broker(this);
-		}
-	}
+        public Broker build() {
+            return new Broker(this);
+        }
+    }
 
-	private Broker(Builder builder) {
-		ip = builder.ip;
-		port = builder.port;
-		name = builder.name;
-		neighbor = builder.neighbor;
-	}
+    private Broker(Builder builder) {
+        ip = builder.ip;
+        port = builder.port;
+        name = builder.name;
+        neighbor = builder.neighbor;
+    }
 
 
-	public statid void main(String[] args) {
-		Broker aBroker = new Broker.Builder("192.168.0.10", 8082).setName("brokerA")
-		.(Lists.asList("192.168.0.11:8082","192.168.0.12:8082")).build();
-	}
+    public statid void main(String[] args) {
+        Broker aBroker = new Broker.Builder("192.168.0.10", 8082).setName("brokerA")
+        .(Lists.asList("192.168.0.11:8082","192.168.0.12:8082")).build();
+    }
 }
 {% endhighlight %}
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Telescoping Constructor Pattern"
 date: 2018-03-04 16:55 +0900
-category: pattern
-tags: [pattern, java]
+category: [development, design_pattern]
+tags: [design_pattern, java]
 ---
 
 Telescoping constructor 패턴은 필수인자를 받는 생성자를 정의하고, 선택적 인자를 받는 생성자들을 따로 추가하는 방식이다.

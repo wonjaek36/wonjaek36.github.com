@@ -2,8 +2,8 @@
 layout: post
 title: "반응형 웹 디자인에서 html <map> 태그처럼 하기"
 date: 2018-01-28 23:56 +0900
-category: Web
-tags: [jQuery]
+category: [library, jQuery]
+tags: [library, jQuery, web]
 ---
 
 html에서 이미지의 특정영역에 어떤 이벤트가 발생하도록 하려면 [map 태그](https://www.w3schools.com/tags/tag_area.asp)를 사용한다.

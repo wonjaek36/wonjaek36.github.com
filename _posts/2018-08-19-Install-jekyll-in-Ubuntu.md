@@ -2,8 +2,8 @@
 layout: post
 title: "Install Jekyll in Ubuntu (18.04)"
 date: 2018-08-19 20:11 +0900
-category: "jekyll"
-tags: [ubuntu, jekyll]
+category: [framework, jekyll]
+tags: [framework, jekyll, installation]
 ---
 
 Environment: Ubuntu 18.04 Desktop  

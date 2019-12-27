@@ -2,8 +2,8 @@
 layout: post
 title: "Network Interface Setting - Static (CentOS 7)"
 date: 2018-08-09 14:29 +0900
-category: "utils"
-tags: [centos, linux]
+category: [linux, centos]
+tags: [linux, centos, network]
 ---
 
 Environment: CentOS 7(1804) Minimal  

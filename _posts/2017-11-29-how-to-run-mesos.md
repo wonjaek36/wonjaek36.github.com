@@ -2,8 +2,8 @@
 layout: post
 title: "How to run mesos with HA (feat. Spark)"
 date: 2017-11-25 19:31 +0900
-category: mesos
-tags: [mesos]
+category: [platform, mesos]
+tags: [platform, mesos, dcos, introduction]
 ---
 <p>
 	<h4>1. Environment</h4>

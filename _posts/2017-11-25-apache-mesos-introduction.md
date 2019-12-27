@@ -2,8 +2,8 @@
 layout: post
 title: "Introduction to Apache Mesos"
 date: 2017-11-25 19:31 +0900
-category: []
-tags: []
+category: [platform, mesos]
+tags: [mesos, dcos, introduction]
 ---
 
 <h3>1. Overview</h3>

@@ -2,8 +2,8 @@
 layout: post
 title: "Probability and Computing 3.4"
 date: 2018-01-14 09:50 +0900
-category: "Probability and Computing"
-tags: [probability_and_computing]
+category: [math, probability_and_computing]
+tags: [math, probability_and_computing, book]
 ---
 
 <a href="{{ site.url }}/assets/Probability_and_Computing_3.4.pdf" >Download PDF file</a>

@@ -2,6 +2,7 @@
 layout: post
 title: "Keyboard layout change on Windows"
 date: 2019-03-08 15:03 +0900
+category: []
 tags: [windows, keyboard]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "TS-CondaHTTPError: HTTP 000 CONNECTION FAILED for url"
 date: 2019-03-08 14:42 +0900
+category: []
 tags: [conda, windows]
 ---
 

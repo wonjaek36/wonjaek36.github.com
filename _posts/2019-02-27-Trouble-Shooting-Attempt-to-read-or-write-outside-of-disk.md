@@ -2,6 +2,7 @@
 layout: post
 title: "TS-Attempt to read or write outside of disk"
 date: 2019-02-27 12:05 +0900
+category: []
 tags: [linux, ubuntu]
 ---
 
