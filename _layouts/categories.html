@@ -37,24 +37,40 @@ layout: default
 
                         <ul id="subcategory-list">
 
-                            <li><span class="subcategory-list-title">{% include icon-subcategory.html %}Common</span>
 
-                                <ul id="subcategory-item-list">
-                                {% for post in site.posts %} 
+                            {% assign common_posts = false %}
+                            {% for post in site.posts %}
+                                {% if post.categories.size != 1 %}
+                                    {% continue %}
+                                {% endif %}
 
-                                    {% if post.categories.size != 1 %}
-                                        {% continue %}
-                                    {% endif %}
+                                {% if post.categories[0] != category1_name %}
+                                    {% continue %}
+                                {% endif %}
 
-                                    {% if post.categories[0] != category1_name %}
-                                        {% continue %}
-                                    {% endif %} 
-                                    
-                                    <li id="subcategory-item"><a href="{{ post.url }}" id="subcategory-post-item">{% include icon-post.html %}{{ post.title }}</a></li>
-                                    
-                                {% endfor %}
-                                </ul>
-                            </li> 
+                                {% assign common_posts = true %}
+                            {% endfor %}
+
+                            {% if common_posts %}
+                                <li><span class="subcategory-list-title">{% include icon-subcategory.html %}Common</span>
+
+                                    <ul id="subcategory-item-list">
+                                    {% for post in site.posts %} 
+
+                                        {% if post.categories.size != 1 %}
+                                            {% continue %}
+                                        {% endif %}
+
+                                        {% if post.categories[0] != category1_name %}
+                                            {% continue %}
+                                        {% endif %} 
+                                        
+                                        <li id="subcategory-item"><a href="{{ post.url }}" id="subcategory-post-item">{% include icon-post.html %}{{ post.title }}</a></li>
+                                        
+                                    {% endfor %}
+                                    </ul>
+                                </li> 
+                            {% endif %}
 
                             {% for subcategory in categories %}
                                 {% if subcategory.level == 2 and subcategory.parent == category1_name %}
