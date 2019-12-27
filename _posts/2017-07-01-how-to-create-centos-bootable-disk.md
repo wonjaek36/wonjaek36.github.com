@@ -3,7 +3,7 @@ layout: post
 title: "How to Create CentOS Bootable Disk"
 date: 2017-07-01 19:09 +0900
 categories: [linux, centos]
-tags: [centos, linux]
+tags: [linux, utils]
 ---
 
 [Universial USB Installer]를 이용해서 CentOS Bootable Disk를 만들었더니,

@@ -22,6 +22,9 @@ layout: default
                 </li>
         	{% endif %}
         {% endfor %}
+        <li class="cover-category-item">
+                <a href="#Uncategorized">{% include icon-category.html %}<span class="cover-category-title">Uncategorized</span></a>
+        </li>
     </ul>
 </div>
 
@@ -110,6 +113,16 @@ layout: default
                 {% endif %}
             {% endfor %}
 
+            <li><span class="category-list-title" id="Uncategorized">{% include icon-category.html %}Uncategorized</span>
+                <ul id="subcategory-item-list">
+                {% for post in site.posts %} 
+
+                    {% if post.categories.size == 0 %}
+                        <li id="subcategory-item"><a href="{{ post.url }}" id="subcategory-post-item">{% include icon-post.html %}{{ post.title }}</a></li>     
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

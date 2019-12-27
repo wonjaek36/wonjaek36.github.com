@@ -2,8 +2,8 @@
 layout: post
 title: "Download packages by yum (CentOS)"
 date: 2017-09-28 16:10 +0900
-category: "utils"
-tags: [centos, linux]
+category: [linux, centos]
+tags: [linux, centos, package_manager]
 ---
 
 CentOS에서 rpm packages만 받고 싶을 때 사용하는 명령어.<br />

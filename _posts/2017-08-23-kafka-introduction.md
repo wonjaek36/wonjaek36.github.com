@@ -2,8 +2,8 @@
 layout: post
 title: "Introduction to Kafka Architecture"
 date: 2017-08-23 10:45 +0900
-category: kafka
-tags: [kafka]
+category: [platform, kafka]
+tags: [kafka, platform, data_streaming]
 ---
 
 <h3>1. Overview</h3> 

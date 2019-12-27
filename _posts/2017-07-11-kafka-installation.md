@@ -2,8 +2,8 @@
 layout: post
 title: "Installation Kafka"
 date: 2017-07-11 14:48 +0900
-category: kafka
-tags: [kafka]
+category: [platform, kafka]
+tags: [platform, kafka, kafka, data_streaming]
 ---
 
 Step 1. Download kafka

@@ -2,8 +2,8 @@
 layout: post
 title: "How to show post by category in jekyll"
 date: 2017-08-24 23:09 +0900
-category: "jekyll"
-tags: [jekyll]
+category: [framework, jekyll]
+tags: [jekyll, blog, category]
 ---
 
 jekyll에서 category별로 글을 띄우고 싶다면 다음과 같이하면 된다.<br />

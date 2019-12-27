@@ -2,8 +2,8 @@
 layout: post
 title: "clisp chapter4"
 date: 2017-10-09 22:56 +0900
-category: clisp
-tags: [clisp]
+category: []
+tags: []
 ---
 
 <h4>1. True/False </h4>

@@ -2,8 +2,8 @@
 layout: post
 title: "How to Network Setup on Ubuntu"
 date: 2017-08-30 02:20 +0900
-category: "utils"
-tags: [ubuntu, linux]
+category: [linux, ubuntu]
+tags: [ubuntu, linux, network]
 ---
 
 우분투 네트워크 설정 방법<br />

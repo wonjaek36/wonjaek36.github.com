@@ -2,8 +2,8 @@
 layout: post
 title: "Install clisp on Mac OS"
 date: 2017-09-05 23:09 +0900
-category: clisp
-tags: [clisp]
+category: [language, common_lisp]
+tags: [mac, language, common_lisp]
 ---
 
 별 것 아니지만, 그래도 기록 남겨놓아아지. <br />

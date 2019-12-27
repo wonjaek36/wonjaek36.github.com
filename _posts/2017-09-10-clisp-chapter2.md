@@ -2,8 +2,8 @@
 layout: post
 title: "clisp chapter2"
 date: 2017-09-09 11:50 +0900
-category: clisp
-tags: [clisp]
+category: []
+tags: []
 ---
 
 <h4>1. 전역 변수 정의</h4>
