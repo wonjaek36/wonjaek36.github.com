@@ -11,11 +11,11 @@ layout: default
         {% for category in categories %}
         	{% if category.level == 1 %}
                 <li class="cover-category-item">
-                {% include icon-category.html %}<span class="cover-category-title">{{ category.title }}</span>
+                <a href="#{{category.name}}">{% include icon-category.html %}<span class="cover-category-title">{{ category.title }}</span></a>
                     <p class="cover-subcategory-list">
                     {% for subcategory in categories %}
                         {% if subcategory.level == 2 and subcategory.parent == category.name %}
-                            <span class="cover-subcategory-item">{{ subcategory.title }}</span>
+                            <a href="#{{subcategory.name}}"><span class="cover-subcategory-item">{% include icon-subcategory.html %}{{subcategory.title}}</span></a>
                         {% endif %}
                     {% endfor %}
                     </p>
@@ -32,14 +32,34 @@ layout: default
             {% for category in categories %}
                 {% if category.level == 1 %}
 
-                    <li>{{ category.title }}
+                    <li><span class="category-list-title" id="{{category.name}}">{% include icon-category.html %}{{ category.title }}</span>
                     {% assign category1_name = category.name %}
 
                         <ul id="subcategory-list">
+
+                            <li><span class="subcategory-list-title">{% include icon-subcategory.html %}Common</span>
+
+                                <ul id="subcategory-item-list">
+                                {% for post in site.posts %} 
+
+                                    {% if post.categories.size != 1 %}
+                                        {% continue %}
+                                    {% endif %}
+
+                                    {% if post.categories[0] != category1_name %}
+                                        {% continue %}
+                                    {% endif %} 
+                                    
+                                    <li id="subcategory-item"><a href="{{ post.url }}" id="subcategory-post-item">{% include icon-post.html %}{{ post.title }}</a></li>
+                                    
+                                {% endfor %}
+                                </ul>
+                            </li> 
+
                             {% for subcategory in categories %}
                                 {% if subcategory.level == 2 and subcategory.parent == category1_name %}
                                     
-                                    <li>{{ subcategory.title }}
+                                    <li><span class="subcategory-list-title" id="{{subcategory.name}}">{% include icon-subcategory.html %}{{ subcategory.title }}</span>
                                     {% assign category2_name = subcategory.name %}
 
                                         <ul id="subcategory-item-list">
@@ -57,7 +77,7 @@ layout: default
                                                 {% continue %}
                                             {% endif %}
                                             
-                                            <li id="subcategory-item"><a href="{{ post.url }}" class="">{{ post.title }}</a></li>
+                                            <li id="subcategory-item"><a href="{{ post.url }}" id="subcategory-post-item">{% include icon-post.html %}{{ post.title }}</a></li>
                                             
                                         {% endfor %}
                                         </ul>
@@ -67,9 +87,9 @@ layout: default
                                 {% endif %}
                             {% endfor %}
 
-                            <li id="subcategory-item">Other</li>
-                        </ul>
+                            
 
+                        </ul>
                     </li>
                 {% endif %}
             {% endfor %}
@@ -78,3 +98,23 @@ layout: default
     </div>
 </div>
 
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script>
+
+    $("a[href^='#']").click(function(e) {
+        e.preventDefault();
+    
+        var position = $($(this).attr("href")).offset().top;
+
+        $("body, html").animate({
+            scrollTop: position
+        }, 1000);
+    });
+
+</script>

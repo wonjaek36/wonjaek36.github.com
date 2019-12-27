@@ -1,18 +1,15 @@
 @charset "utf-8";
 
 a.tag-anchor {
-	.icon.icon-tag > svg {
-		fill: $tag-color;
-	}
+	
+	fill: $tag-color;
   color: $tag-color;
-}
-a.tag-anchor:hover {
 
-	.icon.icon-tag > svg {
-		fill: $tag-hover-color;
-	}
-  color: $tag-hover-color;
-  cursor: pointer;
+  &:hover {
+    fill: $tag-hover-color;
+    color: $tag-hover-color;
+    cursor: pointer;
+  }
 }
 
 
