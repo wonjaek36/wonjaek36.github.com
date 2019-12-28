@@ -2,8 +2,8 @@
 layout: post
 title: "Change pip mirror on Windows"
 date: 2018-09-26 20:57 +0900
-category: []
-tags: []
+category: [language, python]
+tags: [language, python, package_manager]
 ---
 
 Environment: Windows 10, Python 3.6.6  

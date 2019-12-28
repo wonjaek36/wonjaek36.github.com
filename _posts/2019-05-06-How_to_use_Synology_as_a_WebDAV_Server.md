@@ -2,7 +2,7 @@
 layout: post
 title: "How to use Synology as a WebDAV server(+access through Windows)"
 date: 2019-05-06 12:13 +0900
-category: []
+category: [platform, synology]
 tags: [synology]
 ---
 

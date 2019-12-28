@@ -2,8 +2,8 @@
 layout: post
 title: "How to Install Elasticsearch(Cluster)"
 date: 2018-01-09 17:23 +0900
-category: [platform, elasticsearch]
-tags: [platform, elasticsearch, elk]
+category: [database, elasticsearch]
+tags: [database, elasticsearch, elk]
 ---
 
 ### Installation Environment

@@ -2,7 +2,7 @@
 layout: post
 title: "Create database example code in Mariadb"
 date: 2019-02-19 18:17 +0900
-category: []
+category: [database, mariadb]
 tags: [mariadb]
 ---
 

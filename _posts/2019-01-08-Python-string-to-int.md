@@ -2,7 +2,7 @@
 layout: post
 title: "Python string to int type cast"
 date: 2019-01-08 23:15 +0900
-category: []
+category: [language, python]
 tags: [python]
 ---
 

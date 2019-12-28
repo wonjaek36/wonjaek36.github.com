@@ -2,5 +2,5 @@
 name: framework
 level: 1
 title: Framework
-subcategories: [jekyll]
+subcategories: [jekyll, react, tensorflow, conda]
 ---
