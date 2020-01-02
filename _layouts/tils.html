@@ -2,25 +2,116 @@
 layout: default
 ---
 
-<div id="TIL title">
-    <h1>Today I Learned & Did</h1>
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+{% assign date_tag_id_format = site.minima.date_format | default: "%Y-%m-%d" %}
+<div id="TILs-title">
+	<h1>Today I Learned</h1>
 </div>
 
 {% assign desc_tils = site.tils | sort: 'date' | reverse %}
+{% assign today = site.time | date: '%s'  %}
+
 {% for til in desc_tils %}
 
-    <div id="TIL-wrapper" class="container">
-        
-        <a href="{{ til.url }}" class="tag-post-link">
-            <time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">
-                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                {{ til.date | date: date_format }} - 
-                {{ til.title | escape }}
-            </time>
-        </a>
+	{% assign til_date = til.date | date: '%s' %}
+	{% assign secondsSince = today | minus: til_date %}
+	{% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %} 
+	{% assign daysSince = hoursSince | divided_by: 24 %}
 
-        <div id="TIL-content">
-        </div>
-    </div>
-    
+	{% if daysSince > 7 %}
+		{% break %}
+	{% endif %}
+
+	<div id="TILs-wrapper" class="container">
+			<a href="{{ til.url }}" class="til-link">
+					<time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">
+							{{ til.date | date: date_format }}
+					</time>
+			</a>
+
+			<div id="{{ til.date | date:date_tag_id_format }}" class="TILs-content-visible">
+				{{ til.content }}
+			</div>
+	</div>
 {% endfor %}
+
+<div id="TILs-legacy">
+{% assign days = 31 | times: 86400 %}
+{% assign previousTILYearMonth = today | date: "%s" | plus: days | date: "%Y %B" %}
+{% assign first_month = true %}
+{% for til in desc_tils %}
+
+	{% assign til_date = til.date | date: '%s' %}
+	{% assign secondsSince = today | minus: til_date %}
+	{% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %} 
+	{% assign daysSince = hoursSince | divided_by: 24 %}
+
+	{% if daysSince <= 7 %}
+		{% continue %}
+	{% endif %}
+	
+	{% assign currentTILYearMonth = til.date | date: "%Y %B" %}
+	{% assign id_currentTILYearMonth = til.date | date: "%Y%b" %}
+	{% if previousTILYearMonth != currentTILYearMonth %}
+		{% if first_month == false %}
+			</ul>
+		{% endif %}
+
+		{% assign previousTILYearMonth = currentTILYearMonth %} 
+		<p id="{{ id_currentTILYearMonth }}" class="TILs-legacy-month">{{ currentTILYearMonth }}</p><ul id="ul{{id_currentTILYearMonth}}" class="TILs-month-group">
+
+		{% assign first_month = false %}
+	{% endif %}
+
+	<li>
+		<div id="TILs-wrapper">
+			<a href="{{ til.url }}" class="til-link">{{ til.date | date: date_format}}</a>
+
+			<div id="{{ til.date | date: date_tag_id_format }}" class="TILs-content-invisible">
+				{{ til.content }}
+			</div>
+		</div>
+	</li>
+
+{% endfor %}
+</ul></p>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script>
+
+		console.log($("#ul2019Dec").css("display"));
+		$("#ul2019Dec").css("display", "block");
+
+    $("p.TILs-legacy-month").click(function(e) {
+        e.preventDefault();
+
+        let uiIDTag = "#ul" + $(this).attr("id");
+        console.log(uiIDTag == "#ul2019Dec");
+        console.log(uiIDTag);
+        console.log($(uiIDTag).css("display"));
+        if( $(uiIDTag).css("display") == "none" ) {
+        	$(uiIDTag).css("display", "block");
+        } else {
+        	$(uiIDTag).css("display", "none");
+        }
+   
+    });
+
+</script>
+
+<!--
+{%   assign today = site.time | date: '%s'      %}
+{%   assign start = '20-01-2014 04:00:00' | date: '%s'  %}
+{%   assign secondsSince = today | minus: start     %}
+{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %} 
+{%   assign daysSince = hoursSince | divided_by: 24  %}
+//-->
+
+
+

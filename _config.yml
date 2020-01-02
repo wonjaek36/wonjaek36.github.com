@@ -36,28 +36,41 @@ sass:
   sass_dir: _sass
 
 paginate: 7
-# paginate_path: "/page:num"
+
+
+collections:
+
+  tags:
+    output: false
+
+  categories:
+    output: false
+
+  tils:
+    output: true
+
 
 defaults:
-  - scope:
+  - 
+    scope:
       path: "tags"
       type: tags
     values:
       layout: tags
 
-  - scope:
+  - 
+    scope:
       path: "categories"
       type: categories
     values:
       layout: default
 
-collections:
-  
-  tags:
-    output: false
-  
-  categories:
-    output: false
+  - 
+    scope:
+      path: "tils"
+      type: tils
+    values:
+      layout: tils
 
 
 # Exclude from processing.
