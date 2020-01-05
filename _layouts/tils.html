@@ -30,7 +30,7 @@ layout: default
 			</a><span id="{{ til.date | date:date_tag_id_format }}" class="icon-til-down-wrapper">{% include icon-til-down.html %}</span>
 
 
-			<div id="content-{{ til.date | date:date_tag_id_format }}" class="TILs-content">
+			<div id="content-{{ til.date | date:date_tag_id_format }}" class="TILs-content TILs-content-invisible">
 				{{ til.content }}
 			</div>
 	</div>
