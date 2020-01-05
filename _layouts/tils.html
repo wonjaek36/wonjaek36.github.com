@@ -27,9 +27,10 @@ layout: default
 					<time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">
 							{{ til.date | date: date_format }}
 					</time>
-			</a>
+			</a><span id="{{ til.date | date:date_tag_id_format }}" class="icon-til-down-wrapper">{% include icon-til-down.html %}</span>
 
-			<div id="{{ til.date | date:date_tag_id_format }}" class="TILs-content-visible">
+
+			<div id="content-{{ til.date | date:date_tag_id_format }}" class="TILs-content">
 				{{ til.content }}
 			</div>
 	</div>
@@ -66,9 +67,8 @@ layout: default
 
 	<li>
 		<div id="TILs-wrapper">
-			<a href="{{ til.url }}" class="til-link">{{ til.date | date: date_format}}</a>
-
-			<div id="{{ til.date | date: date_tag_id_format }}" class="TILs-content-invisible">
+			<a href="{{ til.url }}" class="til-link">{{ til.date | date: date_format}}</a><span id="{{ til.date | date:date_tag_id_format }}" class="icon-til-down-wrapper">{% include icon-til-down.html %}</span>
+			<div id="content-{{ til.date | date: date_tag_id_format }}" class="TILs-content TILs-content-invisible">
 				{{ til.content }}
 			</div>
 		</div>
@@ -95,7 +95,21 @@ layout: default
 		} else {
 			$(uiIDTag).hide(500);
 		}
-	 
+	});
+
+	$("span.icon-til-down-wrapper").click(function(e) {
+		e.preventDefault();
+
+		let id = $(this).attr("id");
+		let content_id = "#content-" + id;
+		console.log(content_id);
+		
+		if( $(content_id).css("display") == "none") {
+			$(content_id).show(250);
+		} else {
+			$(content_id).hide(250);
+		}
+
 	});
 
 </script>

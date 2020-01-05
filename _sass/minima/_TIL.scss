@@ -47,10 +47,24 @@
     margin-left: 2em;
 }
 
-.TILs-content-invisible {
+.TILs-content {
+    display: block;
+    color: $grey-color;
+    font-size: 0.75em;
+    .TILs-content-invisible {
+        display:none;
+    }
+    ul {
+        margin-bottom: 5px;
+    }
+}
+
+.TILs-content.TILs-content-invisible {
     display: none;
 }
 
-.TILs-content-visible {
-    display: block;
+.icon-til-down-wrapper {
+
+    fill: $grey-color;
+    cursor: pointer;
 }
