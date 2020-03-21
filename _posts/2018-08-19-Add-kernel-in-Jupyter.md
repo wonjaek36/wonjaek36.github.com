@@ -14,14 +14,14 @@ You can import a virtual environment to use specific python version or installed
 I will explain how to add, remove and watch list kernel in this page.
 
 #### 1. Add new kernel in Jupyter
-  
+
 {% highlight shell %}
 $ source <venv directory>/bin/activate <venv name>
 $ pip install ipykernel # You can skip if you already install it
-$ python -m ipykernel --user --name <venv name> --display-name <display name>
+$ python -m ipykernel install --user --name <venv name> --display-name <display name>
 $ # if you add --user option, it will create kernel in ~\/.local/share/jupyer/kernel
 $ # if you don't add it, it will create kernel in ~\/usr/local/share/jupyter (it may require root privilege)
-{% endhighlight %} 
+{% endhighlight %}
 
 #### 2. Watch kernel list in Jupyter
 
