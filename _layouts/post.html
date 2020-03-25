@@ -11,17 +11,20 @@ layout: default
         date: {{ page.date | date: date_format }}
       </time>
       {% if page.lastmod != null %}
+      <br />
         <time datetime="{{ page.lastmod | date_to_xmlschema }}" itemprop="datePublished">
           {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          date: {{ page.lastmod | date: date_format }}
+          lastmod: {{ page.lastmod | date: date_format }}
         </time>
       {% endif %}
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}
+      <!-- 
       <p class="post-categories">
         categories: {{ page.categories | join: ", " }}
       </p>
+      //-->
       <p class="post-tags">
         tags:
         {% for tag in page.tags %}
