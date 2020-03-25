@@ -42,7 +42,6 @@ collections:
 
   tags:
     output: false
-    
   tils:
     output: true
 
@@ -54,14 +53,7 @@ defaults:
       type: tags
     values:
       layout: tags
-
-  -
-    scope:
-      path: "categories"
-      type: categories
-    values:
-      layout: default
-
+      
   -
     scope:
       path: "tils"
