@@ -4,7 +4,7 @@ layout: default
 
 <div id="tag-cover" class="container"
      {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
-    
+
 
     {% for tag in site.tags %}
     	<a class="tag-anchor" id="{{ tag.name }}" onclick="toggleTag('{{ tag.name }}')"><span class="tag-list">{% include icon-tag.html %}{{ tag.title }}</span></a>{% endfor %}
@@ -32,7 +32,7 @@ layout: default
     var selected_tags = [];
     $(document).ready(
         function init(){
-        
+
             showPostWithTags();
         }
     );
@@ -40,10 +40,10 @@ layout: default
     function toggleTag(tagID) {
 
         let tag_loc = selected_tags.indexOf(tagID);
-        
+
         if (tag_loc == -1) {
-            selected_tags.push(tagID)    
-        } 
+            selected_tags.push(tagID)
+        }
         else {
             selected_tags.splice(tag_loc, 1);
         }
@@ -56,7 +56,7 @@ layout: default
 
         if (selected_tags.length == 0) {
             //$('.post-item').css('display', 'block');
-            $('.post-item').show(1000);
+            $('.post-item').show(0);
         } else {
             //$('.post-item').css('display', 'none');
             //$('.post-item').delay(2500).fadeIn();
@@ -64,7 +64,7 @@ layout: default
                 "display": "none"
             });
             for(let i=0;i<selected_tags.length;i++) {
-                $('.'+selected_tags[i]).show(1000);
+                $('.'+selected_tags[i]).show(0);
             }
 
             /*$('.post-item').delay(2500).fadeIn();
