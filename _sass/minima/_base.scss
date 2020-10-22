@@ -193,7 +193,12 @@ pre {
   clear: both;
 }
 
-
+/**
+* Highlight
+*/
+pre { 
+  white-space: pre-wrap;
+}
 
 /**
  * Icons
