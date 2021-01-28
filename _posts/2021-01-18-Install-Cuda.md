@@ -2,7 +2,7 @@
 layout: post
 title: "Install Cuda(Cudnn) on CentOS"
 date: 2021-01-18 18:00 +0900
-tags: [centos, cuda]
+tags: [centos]
 ---
 
 [CUDA Official Install Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)와 [CuDNN Install Guide](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)를 보고 설치. 자세하게 보려면 가이드를 보는게 좋음
