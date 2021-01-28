@@ -6,7 +6,6 @@ tags: [linux, vpn]
 ---
 
 ### 1. Introduction 
-&nbsp;  
 [SoftEther VPN](https://www.softether.org/)은 오픈소스이며, Window, Linux에서 VPN 서버를 설치하여 사용할 수 있다. 여기서는 Linux에 설치하는 방법을 설명한다.
 
 ### 2. Environment
