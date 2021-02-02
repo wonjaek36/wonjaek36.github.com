@@ -144,7 +144,15 @@ $ systemctl daemon-reload
 $ systemctl restart kubelet
 {% endhighlight %}
 
-### 5. Configure cgroup driver as systemd
+### 5. 설치 확인
+
+{% highlight shell %}
+$ kubectl version
+$ kubeadm version
+$ kubelet --version
+{% endhighlight %}
+
+### 6. Configure cgroup driver as systemd
 * systemd는 리눅스에서 사용하는 resource constrainer
   * kubernetes는 cgroupfs를 사용
   * 두 개를 따로따로 써도 되지만... 하나로 쓰는 게 좋다.
