@@ -480,9 +480,9 @@ EOF
 
 {% highlight shell %}
 $ export CONTROL_PLANE="root@192.168.0.251"
-$ scp /etc/kubernetes/pki/etcd/ca.crt "${CONTROL_PLANE}":
-$ scp /etc/kubernetes/pki/apiserver-etcd-client.crt "${CONTROL_PLANE}":
-$ scp /etc/kubernetes/pki/apiserver-etcd-client.key "${CONTROL_PLANE}":
+$ scp /etc/kubernetes/pki/etcd/ca.crt "${CONTROL_PLANE}":/etc/kubernetes/pki/etcd/
+$ scp /etc/kubernetes/pki/apiserver-etcd-client.crt "${CONTROL_PLANE}":/etc/kubernetes/pki/
+$ scp /etc/kubernetes/pki/apiserver-etcd-client.key "${CONTROL_PLANE}":/etc/kubernetes/pki/
 {% endhighlight %}
 
 * kubeadm-config.yaml 작성(First Control Node)
