@@ -14,6 +14,8 @@ tags: [kubernetes]
 * CentOS 7.9
 * Docker 19.03
 * Kubernetes 1.20.2 (kubeadm, kubelet, kubectl)
+  * External ETCD를 사용하지 않을 때는 1.20.2가 잘 안 됨(이유는 모르겠음... 2002-02-24)
+  * Internal ETCD를 사용하면 1.18.16 version 사용
 
 
 ## 3. Prerequisite

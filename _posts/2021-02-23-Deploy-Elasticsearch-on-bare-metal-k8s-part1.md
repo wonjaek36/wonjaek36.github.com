@@ -13,7 +13,7 @@ tags: [kubernetes]
 
 ## 2. Environment
 * CentOS 7.9
-* Kubernetes 1.20
+* Kubernetes 1.18
 * Elasticsearch 6.8
 * MetalLB 0.9.5
 * Calico 3.8.9
