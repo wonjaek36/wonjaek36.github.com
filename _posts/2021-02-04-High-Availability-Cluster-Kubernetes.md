@@ -235,7 +235,7 @@ $ vi /etc/sysconfig/network-scripts/ifcfg-p2p1 # ifcfg-p2p1:1과 비교
 ...
 NAME="p2p1"
 DEVICE="p2p1"
-IPADDR="192.168.0.250"
+IPADDR="192.168.0.251"
 ...
 
 $ systemctl restart network
@@ -379,7 +379,7 @@ $ systemctl enabled keepalived
 # Official Site에서 코드 직접 다운로드
 
 $ yum install gcc pcre-devel tar make wget -y
-$ wget http://www.haproxy.org/download/2.3/src/haproxxy-2.3.4.tar.gz
+$ wget http://www.haproxy.org/download/2.3/src/haproxy-2.3.4.tar.gz
 $ tar xvf ~/haproxy-2.3.4.tar.gz -C ~/
 $ cd ~/haproxy-2.3.4
 
