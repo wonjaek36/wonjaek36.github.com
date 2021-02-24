@@ -238,7 +238,7 @@ Events:
 {% endhighlight %}
 
 
-## Reference
+## 6. Reference
 * [Kubernetes Service](https://kubernetes.io/ko/docs/concepts/services-networking/service/#loadbalancer)
 * [MetalLB Installation Guide](https://metallb.universe.tf/installation/)
 * [IPVS-Based In-Cluster Load Balancing Deep Dive](https://kubernetes.io/blog/2018/07/09/ipvs-based-in-cluster-load-balancing-deep-dive/)
