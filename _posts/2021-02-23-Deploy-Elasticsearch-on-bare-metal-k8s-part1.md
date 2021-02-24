@@ -9,7 +9,7 @@ tags: [kubernetes]
 * Elasticsearch 6.8을 Kubernetes에 설치
 * Kubernetes는 Bare-Metal에 직접 설치한 버전
   * LoadBalancer가 없어 MetalLB 사용
-* 이번 글에서는 k8s에 Elasticsearch Cluster를 구성하기 위한 Load-Balancer 설치 과정을 설명
+* 이번 글에서는 k8s에 Elasticsearch Cluster를 구성하기 위한 Load-Balancer 설치 및 Service를 구동함
 
 ## 2. Environment
 * CentOS 7.9
@@ -117,7 +117,7 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 192.168.1.240-192.168.1.250
+      - 192.168.0.70-192.168.0.99
 EOF
 $ kubectl apply -f config.yaml
 $ kubectl get po -n metallb-system
@@ -131,6 +131,112 @@ speaker-cr6sb                 1/1     Running   0          4h22m
 # 만약 Controller가 pending 상태라면, control plane 노드만 연결했을 수도 있다.
 # Worker 노드가 추가되면, 워커 노드에 controller가 deploy 된다.
 {% endhighlight %}
+
+## 5. Create Service
+* Elasticsearch는 두 개의 포트를 사용(9200, 9300)
+  * 9200은 Rest API, 간단하게 말하면 유저와의 통신
+  * 9300은 Node Communicate을 위해 사용
+* 따라서, 서비스도 두 가지가 필요
+
+* 먼저 Cluster 간 통신을 위한 포트
+  * Pod들 간의 통신이기 때문에, 굳이 외부로 아이피를 공개할 필요가 업승ㅁ
+  * ClusterIP type으로 생성
+  * metadata.name은 기억 필수, 추후 elasticsearch 환경변수에서 사용함
+    * 6.8 버전에서는 discovery.zen.ping.unicast.hosts에 사용
+
+{% highlight yaml %}
+apiVersion: v1
+kind: Service
+metadata:
+  name: elastic-cluster-svc
+spec:
+  clusterIP: None
+  ports:
+  - port: 9300
+    protocol: TCP
+    targetPort: 9300
+  selector:
+    app: elasticsearch
+  sessionAffinity: None
+  type: ClusterIP
+{% endhighlight %}
+
+* 두번 째는, Rest API Port
+  * 이는 유저와 통신을 담당해야하는 부분이라서 외부 IP가 필요
+    * MetalLB가 할당해줌
+  * Elasticsearch Cluster를 3개로 구성할 것이기 때문에, Load Balancer Type으로 사용
+{% highlight yaml %}
+apiVersion: v1
+kind: Service
+metadata:
+  name: elastic-loadbalancer-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: elasticsearch
+  ports:
+    - port: 9200
+      targetPort: 9200
+status:
+  loadBalancer:
+    ingress:
+      - ip: 192.168.0.70 # 유의미한지 아직은 잘 모르겠음...
+{% endhighlight %}
+
+* 실행한 서비스 확인
+{% highlight shell %}
+$ kubectl get svc
+NAME                       TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
+elastic-cluster-svc        ClusterIP      None          <none>         9300/TCP         32m
+elastic-loadbalancer-svc   LoadBalancer   10.99.13.33   192.168.0.70   9200:32530/TCP   32m
+kubernetes                 ClusterIP      10.96.0.1     <none>         443/TCP          15h
+
+$ kubectl describe svc elastic-cluster-svc
+Name:              elastic-cluster-svc
+Namespace:         default
+Labels:            <none>
+Annotations:       Selector:  app=elasticsearch
+Type:              ClusterIP
+IP:                None
+Port:              <unset>  9300/TCP
+TargetPort:        9300/TCP
+Endpoints:         172.16.135.1:9300,172.16.3.65:9300,172.16.33.129:9300
+Session Affinity:  None
+Events:            <none>
+
+$ kubectl describe svc elastic-loadbalancer-svc
+Name:              elastic-cluster-svc
+Namespace:         default
+Labels:            <none>
+Annotations:       Selector:  app=elasticsearch
+Type:              ClusterIP
+IP:                None
+Port:              <unset>  9300/TCP
+TargetPort:        9300/TCP
+Endpoints:         172.16.135.1:9300,172.16.3.65:9300,172.16.33.129:9300
+Session Affinity:  None
+Events:            <none>
+
+$ kubectl describe svc elastic-loadbalancer-svc
+Name:                     elastic-loadbalancer-svc
+Namespace:                default
+Labels:                   <none>
+Annotations:              Selector:  app=elasticsearch
+Type:                     LoadBalancer
+IP:                       10.99.13.33
+LoadBalancer Ingress:     192.168.0.70
+Port:                     <unset>  9200/TCP
+TargetPort:               9200/TCP
+NodePort:                 <unset>  32530/TCP
+Endpoints:                172.16.135.1:9200,172.16.3.65:9200,172.16.33.129:9200
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason        Age                From                Message
+  ----    ------        ----               ----                -------
+  Normal  IPAllocated   33m                metallb-controller  Assigned IP "192.168.0.70"
+{% endhighlight %}
+
 
 ## Reference
 * [Kubernetes Service](https://kubernetes.io/ko/docs/concepts/services-networking/service/#loadbalancer)
