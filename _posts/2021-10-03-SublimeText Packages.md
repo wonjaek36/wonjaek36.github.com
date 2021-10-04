@@ -5,7 +5,7 @@ date: 2021-10-11 11:11+0900
 tags: [sublime-text]
 ---
 
-개인적으로 사용하는 sublime packages 정리
+개인적으로 사용하는 sublime packages 정리  
 Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping도 Emacs 사용
 
 
