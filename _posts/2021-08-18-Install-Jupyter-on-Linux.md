@@ -2,7 +2,7 @@
 layout: post
 title: "Install Jupyter on Linux(Ubuntu)"
 date: 2021-08-18 23:13 +0900
-tags: [Jupyter]
+tags: [jupyter]
 ---
 
 ## Environment
