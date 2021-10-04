@@ -27,7 +27,7 @@ Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping�
 * Functionality
   * 파이썬 문법 체커
 
-### 3. Python 
+## 3. Python 
 ### 3.1 Jedi - Python autocompletion 
 * Object: Sublime Plugins with [Jedi](https://github.com/davidhalter/jedi) library
 * Provider: srusskih
