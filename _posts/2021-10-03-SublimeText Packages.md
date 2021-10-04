@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Sublime-Text Packages"
+date: 2021-10-11 11:11+0900
+tags: [sublime-text]
+---
+
+개인적으로 사용하는 sublime packages 정리
+Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping도 Emacs 사용
+
+
+## Themes
+### File Icon
+* Object: Change File Icon colorful
+* Provider: braver
+* Link: [https://packagecontrol.io/packages/FileIcons](https://packagecontrol.io/packages/FileIcons%20Mono)
+* Functionality
+  * 아이콘 변경
+  * Gray Scale도 있어서, 취향에 따라 선택
+    * [https://packagecontrol.io/packages/FileIcons%20Mono](https://packagecontrol.io/packages/FileIcons%20Mono)
+
+## Python
+### Python 3
+* Object: Syntax Highlighter for Python 3
+* Provider: petervaro
+* Link: [https://github.com/petervaro/python](https://github.com/petervaro/python)
+* Functionality
+  * 파이썬 문법 체커
+
+### Python 
+### Jedi - Python autocompletion 
+* Object: Sublime Plugins with [Jedi](https://github.com/davidhalter/jedi) library
+* Provider: srusskih
+* Link: [https://github.com/srusskih/SublimeJEDI](https://github.com/srusskih/SublimeJEDI)
+* Functionality
+  * Python Autocompletion
+
+## Tools
+### Emacs Pro Essentials
+* Object: Emacs keymapping for Sublime
+* Provider: [Sublime-emacs(Group)](https://github.com/sublime-emacs)
+* Link: [https://github.com/sublime-emacs/sublemacspro](https://github.com/sublime-emacs/sublemacspro)
+* Functionality
+  * Emacs keymapping
+
+### JavaScript Enhancement
+* Object: Support Javascript Project
+* Provider: pichillilorenzo
+* Link: [https://github.com/pichillilorenzo/JavaScriptEnhancements](https://github.com/pichillilorenzo/JavaScriptEnhancements)
+* Functionality
+  * Cordova, React, Ionic 등 여러 Javascript Project Support
+  * 개인적으로는 Linter처럼 사용
+  * 현재는 베타버전, 안정적인 것을 원하면 Javascript Completion 사용 
+
+### SFTP
+* Objectve: SFTP in Sublime(Commercial)
+* Provider: CODEX
+* Link: [https://codexns.io/products/sftp_for_sublime](https://codexns.io/products/sftp_for_sublime)
+* Functionality
+  * SFTP 접근 / 파일을 하나씩 열 수 있음
+  * Map to Remote를 통해 File System Mapping
+  * 대체제가 워낙 많기 떄문에 구매를 추천하지는 않음
