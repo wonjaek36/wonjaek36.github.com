@@ -9,8 +9,8 @@ tags: [sublime-text]
 Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping도 Emacs 사용
 
 
-## Themes
-### File Icon
+## 1. Themes
+### 1.1 File Icon
 * Object: Change File Icon colorful
 * Provider: braver
 * Link: [https://packagecontrol.io/packages/FileIcons](https://packagecontrol.io/packages/FileIcons%20Mono)
@@ -19,31 +19,31 @@ Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping�
   * Gray Scale도 있어서, 취향에 따라 선택
     * [https://packagecontrol.io/packages/FileIcons%20Mono](https://packagecontrol.io/packages/FileIcons%20Mono)
 
-## Python
-### Python 3
+## 2. Python
+### 2.1 Python 3
 * Object: Syntax Highlighter for Python 3
 * Provider: petervaro
 * Link: [https://github.com/petervaro/python](https://github.com/petervaro/python)
 * Functionality
   * 파이썬 문법 체커
 
-### Python 
-### Jedi - Python autocompletion 
+### 3. Python 
+### 3.1 Jedi - Python autocompletion 
 * Object: Sublime Plugins with [Jedi](https://github.com/davidhalter/jedi) library
 * Provider: srusskih
 * Link: [https://github.com/srusskih/SublimeJEDI](https://github.com/srusskih/SublimeJEDI)
 * Functionality
   * Python Autocompletion
 
-## Tools
-### Emacs Pro Essentials
+## 4. Tools
+### 4.1 Emacs Pro Essentials
 * Object: Emacs keymapping for Sublime
 * Provider: [Sublime-emacs(Group)](https://github.com/sublime-emacs)
 * Link: [https://github.com/sublime-emacs/sublemacspro](https://github.com/sublime-emacs/sublemacspro)
 * Functionality
   * Emacs keymapping
 
-### JavaScript Enhancement
+### 4.2 JavaScript Enhancement
 * Object: Support Javascript Project
 * Provider: pichillilorenzo
 * Link: [https://github.com/pichillilorenzo/JavaScriptEnhancements](https://github.com/pichillilorenzo/JavaScriptEnhancements)
@@ -52,7 +52,7 @@ Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping�
   * 개인적으로는 Linter처럼 사용
   * 현재는 베타버전, 안정적인 것을 원하면 Javascript Completion 사용 
 
-### SFTP
+### 4.3 SFTP
 * Objectve: SFTP in Sublime(Commercial)
 * Provider: CODEX
 * Link: [https://codexns.io/products/sftp_for_sublime](https://codexns.io/products/sftp_for_sublime)
