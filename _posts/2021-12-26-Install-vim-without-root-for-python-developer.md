@@ -51,9 +51,9 @@ $ git clone https://github.com/vim/vim.git
 $ git checkout <version>  # 원하는 버전 사용, 2021.12.26 기준 8.2 최신버전 사용
 
 # SET CFLAGS & LDFLAGS
-$ export CFLAGS="-I$HOME/app/include/python3.6m"
-$ export CFLAGS="-I$HOME/app/include/openssl"
-$ export LDFLAGS="-rdynamics"
+$ export CFLAGS="-I$HOME/app/include/python3.6m "
+$ export CFLAGS="-I$HOME/app/include/openssl "
+$ export LDFLAGS="-rdynamic"
 
 $ ./configure --prefix="$HOME/app" \
 --with-features huge \
