@@ -37,9 +37,13 @@ Library/Framework 개발자가 아닌, Application 개발자는 Asyncio의 High-
 주로 Asynio.run(<Awaitable function>, *args)와 tasks를 사용
 
 {% highlight python %}
+import asyncio
+
+
 async def async_task_func():
     response = await IO Request
     return response
+
 
 async def async_gather_func(requests):
     tasks = []
@@ -54,11 +58,13 @@ def main():
 
 event loop를 직접 이용하면, 함수 하나를 걷어낼 수는 있다.
 {% highlight python %}
+import asyncio
+
 # async_task_func supposed to be same
 loop = asyncio.get_event_loop()
 tasks = []
 for reqeust in requests:
-    task = asyncio.create_task(async_task_func(request))
+    task = loop.create_task(async_task_func(request))
     task.append(task)
 result = loop.run_until_complete(asyncio.gather(*task))
 {% endhighlight %}
@@ -134,6 +140,7 @@ async def delete(self, index, ids):
 정의한 함수를 이용하여, Elasticsearch에 Asyncio를 이용하여 동시에 요청하고 싶다면,  
 asyncio.create_task와 asyncio.gather 함수를 이용
 {% highlight python %}
+import asyncio
 from elasticsearch import AsyncElasticsearch
 # Create Connection
 conn = AsyncElasticsearch(
@@ -146,3 +153,7 @@ search_task = asyncio.create_task(search(conn=conn, index='index', query=query))
 tasks = [insert_task, search_task]
 result = loop.run_until_complete(asyncio.gather(*tasks))
 {% endhighlight %}
+
+
+#### History
+* 2022.03.29 imports 추가
