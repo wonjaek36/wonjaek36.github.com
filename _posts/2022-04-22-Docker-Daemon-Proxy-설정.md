@@ -2,8 +2,8 @@
 layout: post
 title: "Docker Daemon Proxy 설정"
 date: 2022-04-18 18:07 +0900
-category: [linux, shell]
-tags: [linux, shell]
+category: [docker]
+tags: [docker]
 ---
 
 ## 1. Overview
