@@ -11,7 +11,7 @@ Docker image를 저장하고 분산하기 위해 저장소를 따로 구축하�
 
 * 참고) 이번 글은 [공식 문서](https://docs.docker.com/registry/)와 거의 차이가 없습니다.
 
-## 2. Overview
+## 2. Environment
 * Ubuntu 20.04
 * Docker version: 20.10.14
 
