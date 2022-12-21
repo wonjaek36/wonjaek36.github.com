@@ -61,7 +61,8 @@ Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping�
   * Map to Remote를 통해 File System Mapping
   * 대체제가 워낙 많기 떄문에 구매를 추천하지는 않음
 
-## 5. Themes - Afterglow
+## 5. Themes
+### 5.1 Afterglow
 * Objective: Theme & Color-scheme
 * Provider: yabatadesign
 * Link: http://yabatadesign.github.io/afterglow-theme/
