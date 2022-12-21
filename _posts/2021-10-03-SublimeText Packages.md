@@ -60,3 +60,13 @@ Sublime은 vscode와 달리 가벼운 Text Editor로 많이 활용, Keymapping�
   * SFTP 접근 / 파일을 하나씩 열 수 있음
   * Map to Remote를 통해 File System Mapping
   * 대체제가 워낙 많기 떄문에 구매를 추천하지는 않음
+
+## 5. Themes - Afterglow
+* Objective: Theme & Color-scheme
+* Provider: yabatadesign
+* Link: http://yabatadesign.github.io/afterglow-theme/
+* Specification
+  * Theme는 Afterglow - orange / color-schema는 afterglow-twilight
+  * 고동색 색상의 Theme이고, Find/Replace 등의 서브 창에서 orange 색상의 글꼴이 나옴
+  * twilight scheme은 조금 옅지만, 색상이 부드러워서 많은 글을 볼 때 편한 것 같음 :)
+  * 특이한 건, page 별로 타이틀의 두께가 불필요하게 큰 것 같은데 설정하는 방법을 찾아봐야할 듯..
