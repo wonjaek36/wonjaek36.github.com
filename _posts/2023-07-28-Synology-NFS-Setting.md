@@ -31,3 +31,63 @@ $ sudo mount -t nfs 192.168.0.X:/volumeX/blah /target/directory
 Volume 번호는 DSM의 저장소 관리자에 가서 확인하면 된다. (Volume이 하나라면, volume1)
 
 
+#### Automount Part
+NFS을 Mount하는 것은 네트워크 상황에 따라 다르다. 그래서 NFS를 /etc/fstab에 올려버리면, 부팅 시에 문제를 야기할 수 있다. (매우 오래걸리거나, Lock이 걸릴 수 있다.)
+AutoFS를 이용하면, 사용자가 파일시스템에 접근할 때 비로소 Automount을 해준다. 그러므로, 안전하게 NFS를 쓰자 :)
+
+먼저, IP를 사용해도 좋지만, 그래도 Domain Name을 사용하기 위해서 /etc/hosts에 Synology IP를 등록한다.
+{% highlight shell %}
+$ sudo vim /etc/hosts
+# Add below text
+<synology ip> synology
+{% endhighlight %}
+
+그리고, AutoFS를 설치하고, 버전을 체크한다.
+{% highlight shell %}
+$ sudo apt install autofs
+$ automount --version
+Linux automount version 5.1.6
+...
+{% endhighlight %}
+
+Ubuntu 20.04 에서는 버전 5가 설치된다. (버전 4와 5는 비교적 큰 차이가 있는 것 같으니 4를 사용하실 분은 kernel 문서를 참고해주세요.)
+
+AutoFS에서는 Mount 별로 Map 파일을 구성하고, auto.master에 Map 파일을 등록한다. 두 가지 방법(Direct/Indirect)로 가능한데, 나는 하나의 Synology만 연결하면 되니 Direct를 이용 (여러 Directory를 자동으로 연결하고 싶다면, Indirect)
+
+연결하고자하는 Synology의 Volume은 volume1, Directory는 Target이라고 하고 연결해보면
+{% highlight shell %}
+$ sudo vim /etc/auto.master
+# auto.master 파일에 아래 statement 추가
+/synology /etc/auto.synology
+{% endhighlight %}
+
+그리고, auto.synology 파일을 생성하고 내용을 추가한다.
+{% highlight shell %}
+$ sudo vim /etc/auto.synology
+# Mounted Directory <Tab> Map File Path
+Target -fstype=nfs synology:/volume1/Target
+{% endhighlight %}
+
+마지막으로, autofs를 재시학하고, mount를 확인한다.
+{% highlight shell %}
+$ systemctl restart autofs
+$ systemctl status autofs
+blah blah
+
+$ mount | grep synology
+/etc/auto.synology on /synology type autofs (options...)
+
+$ ls /synology
+# Not-Mounted before Access
+
+$ cd /synology/Target
+$ ls /synology
+Target
+{% endhighlight %}
+
+(Optional) 직접 Access를 하기 전에 Directory가 보이지 않는 것이 불편하다면, browse_mode를 켜면 된다. (성능이 떨어지지만, 개인 사용자는 괜찮다. Production과 관계있다면, 조심해서 사용!)
+{% highlight shell %}
+$ sudo vim /etc/autofs.conf
+# Find browse_mode (close to line 51)
+browse_mode = yes
+{% endhighlight %}
